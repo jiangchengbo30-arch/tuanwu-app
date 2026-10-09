@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="团务助理">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#c8102e">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAGbElEQVR4nO3cTXbbRhCF0aKOF+BsxB5G+x85w2gj0Q6cgQNHpACif9H1qr47twR0v9cFkDq+mTM/vn77ufoaMM/r+9tt9TV8tPRiCDvM1pbi8l9M6PHM1WW47JcRfNS4qgjTfwnBR4/ZRZj2wwk+RppVhOE/lOBjptFFeBn5wwg/ZhudsSFtIvhYYcQ06J4AhB+rjMheVwEIP1brzWBzAQg/vOjJYlMBCD+8ac1kdQEIP7xqyWZVAQg/vKvNaHEBCD9U1GS1qACEH2pKM3taAMIPVSXZHfqnEICapwXg9Ie6swwfFoDwI4pnWeYRCKntFoDTH9EcZZoJgNQ+FYDTH1HtZZsJgNTuCsDpj+geM84EQGq/C8Dpjyw+Zp0JgNQoAFJ7MePxB/lsmWcCIDUKgNQoAFKjAEjtxgswMmMCILUvqy8guj//+bvr3//1x/dBV4I9PAIN1Bv2UpRiHArQ4arAn6EQ7ShAJS+hP0IZ6lCAQt6D/4gilKEAT6iF/ghlOEYBdkQJ/iOK8BnfAzyIGn6z2PfWignwn5nhaD15PV5TNOkLMDpks4Oldr3epS7AiDCtDlCEe1gpbQGi/YlCtPu5SroC9ARFJSQZ7nGUVAVoDYZqKLLdb4s0BWgJQ5QgZL73Mym+B8gegJZ7yfKdQfgJULuRkYK/h/W4F3oCsNmf1d5j9EkQdgLUbFyG4O9hjYJOADa2TM29R50E4QpA+OtkL0GoAhD+NplLEKYAhL9P1hKEKUApwn8s49qEKEDpiZRxg2uVrlGUKSBfAMI/XqYSSH8PoBj+s2tWutaNp2uuJT8BzihvzmoZ1k62ABHGbxTKeyFbgBIZTrDZoq+hZAFKTpzoG3elkrVUnQJyBVBd6AwU90auACU4/ceLuqZSBeDRZ62Ij0JSBQBGC1UATv/5oq2xTAHURmtmSnslU4Az0U4mzyKttUQBlE4U/KKyZxIFAGYJUYBII1lFlDV3XwCVUYrPFPbOfQHORDmJFEVYe/kCAD0oAFJzXQCFZ0g8530PXRfgTIRnUHXqeyBdAKAXBUBqFACpuS2A95cnlPO8l24LcEb95SsS5b2QLQAwAgVAahQAqX1ZfQG4N+OFUfkZfTYmAFKjAEiNAiA13gEu9vg87vlLogyYAEiNAiA1CoDUeAdYjM/o12ICIDXZAvDpiR/Ke+G2ADwaxOF5L90WALgCBUBqFACpSRdA+eUrCvU9cF0Azy9PKON9D10XAJiNAiA1+QKoP4Mqi7D27gvg/RkSxxT2zn0BSkQ4idREWfMQBQBaSRRAYZTinsqeSRSgRJSRrCDSWssUQOVEgdZeyRSgRKSTyatoaxyqAEAtqQKUjNZoJ5QnJWur9PhjJlaAUpRgvKhrKlcAtRMmE8W9kSuAGY9CV4v46LORLEApStAv+hrKFkD1xIlIeS9kC1Aq+gk2U4a1ky5A6cmTYSNHK10z5dPfTLwAZpRghizhNwtQADNKMFKm8JsFKUANSnAs49qEKUDNiZRxo8/UrEmU098sUAHMKEGrrOE3C1YAM0pQK3P4zQIWwIwSlMoefjOz24+v336uvohZasMddZMfsS7/CzkBNrUbl2EaEP57oSfApiXY0TaeNdgXegJsWjYy0jQg/MdSTIBNa6hVw5DtflukKoBZ38muEowM9zhKugJseh9xvAUl2v1cJW0BzMY8568OToR7WCl1AczGv+zODpPa9XqXvgCbmZ/6tIbM4zVFQwEeRPr4cw/Bv5fie4AakQMS+d5aMQGeiDINCP4xClBIrQyEvgwFqOS9CAS/DgXo4KUMhL4dBRjoqkIQ+HEowGT8iYJvFACp8T0AUnt5fX+7rb4IYIXX97cbEwCpUQCkRgGQGgVAai9mv14GVl8IcKUt80wApEYBkNrvAvAYhCw+Zp0JgNTuCsAUQHSPGWcCILVPBWAKIKq9bDMBkNpuAZgCiOYo00wApHZYAKYAoniW5acTgBJA3VmGeQRCaqcFYApAVUl2iyYAJYCa0swWPwJRAqioyWrVOwAlgHe1Ga1+CaYE8Kolm02fAlECeNOayeaPQSkBvOjJYtf3AJQAq/VmsPuLMEqAVUZkb2h4+Z+mcYWRh+7QP4VgGmC20RmbFlimAUaadbhOP7EpAnrMfqq47JGFIqDGVY/Tlz+zUwQ8c/V75NKXVsoAs7Ufnrj71IZSxObtk8J/AccJlhuMvsUuAAAAAElFTkSuQmCC">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22%E5%9B%A2%E5%8A%A1%E6%97%B6%E9%97%B4%E5%8A%A9%E7%90%86%22%2C%20%22short_name%22%3A%20%22%E5%9B%A2%E5%8A%A1%E5%8A%A9%E7%90%86%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22background_color%22%3A%20%22%23f5f6f8%22%2C%20%22theme_color%22%3A%20%22%23c8102e%22%2C%20%22lang%22%3A%20%22zh-CN%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAGbElEQVR4nO3cTXbbRhCF0aKOF%2BBsxB5G%2Bx85w2gj0Q6cgQNHpACif9H1qr47twR0v9cFkDq%2BmTM/vn77ufoaMM/r%2B9tt9TV8tPRiCDvM1pbi8l9M6PHM1WW47JcRfNS4qgjTfwnBR4/ZRZj2wwk%2BRppVhOE/lOBjptFFeBn5wwg/ZhudsSFtIvhYYcQ06J4AhB%2BrjMheVwEIP1brzWBzAQg/vOjJYlMBCD%2B8ac1kdQEIP7xqyWZVAQg/vKvNaHEBCD9U1GS1qACEH2pKM3taAMIPVSXZHfqnEICapwXg9Ie6swwfFoDwI4pnWeYRCKntFoDTH9EcZZoJgNQ%2BFYDTH1HtZZsJgNTuCsDpj%2BgeM84EQGq/C8Dpjyw%2BZp0JgNQoAFJ7MePxB/lsmWcCIDUKgNQoAFKjAEjtxgswMmMCILUvqy8guj//%2Bbvr3//1x/dBV4I9PAIN1Bv2UpRiHArQ4arAn6EQ7ShAJS%2BhP0IZ6lCAQt6D/4gilKEAT6iF/ghlOEYBdkQJ/iOK8BnfAzyIGn6z2PfWignwn5nhaD15PV5TNOkLMDpks4Oldr3epS7AiDCtDlCEe1gpbQGi/YlCtPu5SroC9ARFJSQZ7nGUVAVoDYZqKLLdb4s0BWgJQ5QgZL73Mym%2BB8gegJZ7yfKdQfgJULuRkYK/h/W4F3oCsNmf1d5j9EkQdgLUbFyG4O9hjYJOADa2TM29R50E4QpA%2BOtkL0GoAhD%2BNplLEKYAhL9P1hKEKUApwn8s49qEKEDpiZRxg2uVrlGUKSBfAMI/XqYSSH8PoBj%2Bs2tWutaNp2uuJT8BzihvzmoZ1k62ABHGbxTKeyFbgBIZTrDZoq%2BhZAFKTpzoG3elkrVUnQJyBVBd6AwU90auACU4/ceLuqZSBeDRZ62Ij0JSBQBGC1UATv/5oq2xTAHURmtmSnslU4Az0U4mzyKttUQBlE4U/KKyZxIFAGYJUYBII1lFlDV3XwCVUYrPFPbOfQHORDmJFEVYe/kCAD0oAFJzXQCFZ0g8530PXRfgTIRnUHXqeyBdAKAXBUBqFACpuS2A95cnlPO8l24LcEb95SsS5b2QLQAwAgVAahQAqX1ZfQG4N%2BOFUfkZfTYmAFKjAEiNAiA13gEu9vg87vlLogyYAEiNAiA1CoDUeAdYjM/o12ICIDXZAvDpiR/Ke%2BG2ADwaxOF5L90WALgCBUBqFACpSRdA%2BeUrCvU9cF0Azy9PKON9D10XAJiNAiA1%2BQKoP4Mqi7D27gvg/RkSxxT2zn0BSkQ4idREWfMQBQBaSRRAYZTinsqeSRSgRJSRrCDSWssUQOVEgdZeyRSgRKSTyatoaxyqAEAtqQKUjNZoJ5QnJWur9PhjJlaAUpRgvKhrKlcAtRMmE8W9kSuAGY9CV4v46LORLEApStAv%2BhrKFkD1xIlIeS9kC1Aq%2Bgk2U4a1ky5A6cmTYSNHK10z5dPfTLwAZpRghizhNwtQADNKMFKm8JsFKUANSnAs49qEKUDNiZRxo8/UrEmU098sUAHMKEGrrOE3C1YAM0pQK3P4zQIWwIwSlMoefjOz24%2Bv336uvohZasMddZMfsS7/CzkBNrUbl2EaEP57oSfApiXY0TaeNdgXegJsWjYy0jQg/MdSTIBNa6hVw5DtflukKoBZ38muEowM9zhKugJseh9xvAUl2v1cJW0BzMY8568OToR7WCl1AczGv%2BzODpPa9XqXvgCbmZ/6tIbM4zVFQwEeRPr4cw/Bv5fie4AakQMS%2Bd5aMQGeiDINCP4xClBIrQyEvgwFqOS9CAS/DgXo4KUMhL4dBRjoqkIQ%2BHEowGT8iYJvFACp8T0AUnt5fX%2B7rb4IYIXX97cbEwCpUQCkRgGQGgVAai9mv14GVl8IcKUt80wApEYBkNrvAvAYhCw%2BZp0JgNTuCsAUQHSPGWcCILVPBWAKIKq9bDMBkNpuAZgCiOYo00wApHZYAKYAoniW5acTgBJA3VmGeQRCaqcFYApAVUl2iyYAJYCa0swWPwJRAqioyWrVOwAlgHe1Ga1%2BCaYE8Kolm02fAlECeNOayeaPQSkBvOjJYtf3AJQAq/VmsPuLMEqAVUZkb2h4%2BZ%2BmcYWRh%2B7QP4VgGmC20RmbFlimAUaadbhOP7EpAnrMfqq47JGFIqDGVY/Tlz%2BzUwQ8c/V75NKXVsoAs7Ufnrj71IZSxObtk8J/AccJlhuMvsUuAAAAAElFTkSuQmCC%22%2C%20%22sizes%22%3A%20%22192x192%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%22%7D%2C%20%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAATAElEQVR4nO3dS5bjxhFA0ew%2BXoC8EXlo738kD%2B2N2DuQB21KrC6SBYD5ici4dwE6VSAy4yHBLn1rhPTbL7/%2BvvpnAOjhH//997fVPwOf%2BVAWMeABfhAIa7joExj2AOeIgvFc4AEMfIC%2BBEF/LmgHBj7AXILgfS7gRYY%2BQAxi4BoX7QRDHyA2MXCcC/UFQx8gJzHwmovzhMEPsAch8JiLcsfQB9ibGPiTC9EMfoBqhEDxADD4AWqrHAIlf3GDH4B7FUOg1C9s8APwSqUQKPGLGvwAnFEhBL6v/gFGM/wBOKvC7Ni2cCp8eACMt%2BtpwHa/lMEPwAi7hcBWrwAMfwBG2W3GbFEzu30oAMS2w2lA%2BhMAwx%2BA2XaYPakDYIcPAICcss%2BglEcY2S86AHvJ%2BEog3QmA4Q9ANBlnU6oAyHiBAagh24xKcWSR7aICUFuGVwLhTwAMfwCyyTC7QgdAhgsIAI9En2FhAyD6hQOAr0SeZSEDIPIFA4Azos60cAEQ9UIBwFURZ1uoAIh4gQCgh2gzLkwARLswANBbpFkXIgAiXRAAGCnKzFseAFEuBADMEmH2LQ2ACBcAAFZYPQOXBcDqXxwAVls5C5cEgOEPAD%2BsmonTA8DwB4CPVszGqQFg%2BAPAY7Nn5LQAMPwB4LWZs3JKABj%2BAHDMrJm5/O8AAADzDQ8AT/8AcM6M2Tk0AAx/ALhm9AwdFgCGPwC8Z%2BQs9R0AAChoSAB4%2BgeAPkbN1O4BYPgDQF8jZmvXADD8AWCM3jPWdwAAoKBuAeDpHwDG6jlruwSA4Q8Ac/SauV4BAEBBbweAp38AmKvH7HUCAAAFvRUAnv4BYI13Z/DlADD8AWCtd2axVwAAUNClAPD0DwAxXJ3JTgAAoKDTAeDpHwBiuTKbnQAAQEGnAsDTPwDEdHZGOwEAgIIOB4CnfwCI7cysdgIAAAUdCgBP/wCQw9GZ7QQAAAoSAABQ0JcB4PgfAHI5MrudAABAQS8DwNM/AOT01Qx3AgAABQkAACjoaQA4/geA3F7NcicAAFCQAACAgh4GgON/ANjDs5nuBAAAChIAAFDQpwBw/A8Ae3k0250AAEBBAgAAChIAAFDQhwDw/h8A9vTzjHcCAAAFCQAAKEgAAEBBfwSA9/8AsLf7We8EAAAKEgAAUJAAAICCBAAAFPS9NV8ABIAqbjPfCQAAFCQAAKAgAQAABQkAAChIAABAQQIAAAoSAABQ0Dd/AwD28ff//Gvof/%2Bff/3b0P8%2BMI8AgCRGD/deRALkIAAgkCxD/ipxAHEIAFhk92F/lCiANQQATGLgHyMIYA4BAIMY%2BH0IAhhDAEBHhv5YYgD6EQDwJkN/DTEA7xEAcIGhH4sYgPMEABxk6OcgBuAYAQAvGPq5iQF4TgDAAwb/XoQAfCYA4P8M/RrEAPwgACjP4K9JCFCdAKAsg5/WhAB1CQDKMfh5RAhQjQCgDIOfI4QAVQgAtmfwc4UQYHcCgG0Z/PQgBNiVAGA7Bj8jCAF2IwDYhsHPDEKAXXxf/QNAD4Y/s7jX2IUTAFKzGbOS0wAyEwCkZPA/N2oouebPCQEyEgCkU3kQRR80PhvIQwCQRqXhstsw8dlBPAKAFHYfINWGhs8T1hMAhLbroDAgPvI5w3wCgLB2GgoGwTk%2BexhPABDSDgPAxt%2BHewHGEACEkn2zt9GP5f6AfgQAYWTd3G3qa7hf4D0CgBAybuY28hjcO3CNAGApmze9uJfgHAHAMpk2bBt1Lu4t%2BJoAYIksG7TNOTf3GTwnAJguw6ZsQ96Lew4%2BEwBMYxNmNfcg/EkAMEX0jdemW4v7EQQAE0TebG20tbk3qUwAMFTUDdbmyj33KRV9X/0DsC%2BbKllEvSeiriH24ASAISJuXFE3eWJx71KFAKC7aBuozZMr3MfszisAurJpsoto9060tUV%2BTgDoJtIGFW3zJjf3NjtyAkAXNkh2FumeirTWyE0A8LZIG1KkjZq9RLq3Iq058vIKgLdE2Ygibc7sz33PDpwAcJlNkKqi3HNR1iA5CQAuibLxRNmIqSfKvRdlLZKPVwCcFmHDibL5QmvWBDk5AeAUGx18FuGejLA2yUUAcFiEDSbCRguPRLg3I6xR8hAApBFhg4VX3KNk4jsAHLLyycKmSkbWDNE5AeBLNjI4b%2BW961UARwgAXjL84ToRQGQCgKcMf3ifCCAqAUA4hj%2B7cU8TkQDgoVVPDjZKdrXq3nYKwDMCgE8MfxhDBBCJAOADwx/GEgFEIQBYzvCnGvc8EQgA/rDiCcFGSFUr7n2nANwTALTWDH9YQQSwkgDA8IeFRACrCACmM/zhI2uCFQRAcZ4EoCZrH/83wMIc/e9p5Ofq8xvLmmQmJwBMY6OB16wRZhIARc1%2B0rCxwTGz14pXAXUJgIIMf4hNBDCDAACAggRAMZ7%2BIQenAIwmABjG8If3WEOMJAAKmVn4Ni7oY%2BZacgpQiwAowsIGjrBX1CEA6M7TP/RlTTGCACjA0T/k51UAvQkAujH8YSxrjJ4EwOaUPHCFvWN/AoAuPJnAHNYavQiAjc0qeBsSzDVrzTkF2JsAAICCBMCmPP3D3pwC8C4BAAAFCYANefqHGpwC8A4BwCWGP8RgLXKVANiMUgdGsLfsRwBwmicOiMWa5AoBsBGFDoxkj9mLAOAUTxoQk7XJWQJgE8ocmMFesw8BwGGeMCA2a5QzBAAAFCQANjDjSM6TBeQwY616DbAHAQAABQmA5Dz9Az9zCsARAgAAChIAvOTpH3KydvmKAEjMERywkj0oNwEAAAUJAJ5yhAi5WcO8IgCScvQGRGAvyksA8JAnB9iDtcwzAgAAChIACY0%2BcvPEAHsZvaa9BshJAABAQQIAAAoSAMk4/geu8BqAnwkAAChIAABAQQIgEcf/wDu8BuCeAACAggQAABQkAGitOf6HKqx1bgRAEt6tARnYq/IQAABQkAAAgIIEAN4JQjHWPK0JgBS8UwMysWflIAAAoCABAAAFCYDivAuEmqx9BAAAFCQAgvNlGiAje1d8AgAAChIAhXkHCLXZA2oTAABQkAAAgIIEAAAUJAAAoCABEJh/RgNkZg%2BLTQAU5du/QGv2gsoEAAAUJAAAoCABAAAFCQAAKEgAAEBBAgAAChIAAFCQAAjKH9AAdmAvi%2Bsvq38A5vOHP7hqx83cevhxDXb8bHnNCQAAFCQAAKAgAQAABQkAAChIAABAQQIAAAoSAABQkAAAgIIEAAAUJAAAoCABAAAF%2BX8BwGbO/G17f/8d6nICAAAFCQAAKEgAAEBBAgAAChIAAFCQAACAggQAABQkAACgIAEAAAUJgIL89Tfgnj2hJn8KOKh//vVvFiXDnfmzwXCFeywuJwAAUJAAAICCBAAAFCQAAKAgAQAABQkAAChIAABAQQKgKH9jAGjNXlCZAAjMH9AAMrOHxSYAAKAgAQAABQkAAChIAABAQQKgMN/%2BhdrsAbUJAAAoSAAE55/RABnZu%2BITAABQkAAozjtAqMnaRwAAQEECAAAKEgAJ%2BDINkIk9KwcBgHeBUIw1T2sCAABKEgAAUJAASMI7NSADe1UeAoDWmneCUIW1zo0AAICCBAAAFCQAEhn9bs3RIOxt9Br3/j8XAQAABQkAAChIACTjNQBwheN/fiYAAKAgAQAABQmAhLwGAM5w/M8jAgAAChIAPOQUAPZgLfOMAEjKkRsQgb0oLwHAU54cIDdrmFcEAAAUJAASc/QGrGQPyk0A8JIjRMjJ2uUrAgAAChIAyc04gvMkAbnMWLOO//MTAABQkADYgFMA4MbTP0cJAAAoSABwmFMAiM0a5QwBsAlHcsAM9pp9CABO8YQBMVmbnCUANqLMgZHsMXsRAJzmSQNisSa5QgBsRqEDI9hb9iMAuMQTB8RgLXKVANjQrFK38cBas9agp/89CQAAKEgAbMopAOzN0z/vEgAAUJAA2JhTANiTp396EAB0IQJgDmuNXgTA5hQ8cIW9Y38CgG48mcBY1hg9CYACZpa8DQrGmLm2PP3XIADoTgRAX9YUIwiAIhQ9cIS9og4BUIhXAZCPo39GEQAMIwLgPdYQIwmAYmYXvg0Mrpm9djz91yMAAKAgAVCQUwCIzdM/MwiAokQAxGT4M4sAYBoRAK9ZI8wkAApbUf42OHhsxdrw9F%2BbACjOBgA1WfsIAKZzCgAfWROsIADwKgAWcvTPKgKA1poIgBUMf1YSAPxBBMA8hj%2BrCQCWEwFU454nAgHAB6ueEGyIVLHqXvf0z88EAJ%2BIABjD8CcSAcBDIgD6MvyJRgAQjghgN%2B5pIhIAPLXyycGGyS5W3sue/nlFAPCSCIDrDH8iEwB8SQTAeYY/0X377Zdff1/9Q5DD6mFsUyMD64QsnACQxuqNFb7iHiUTAcBhEZ4sbLBEFeHejLBGyUMAcEqEDSbCRgv3ItyTEdYmufgOAJdE2PBas%2BmxlnVAZk4AuCTKhhNlA6aeKPdelLVIPgKAy6JsPFE2YuqIcs9FWYPk5BUAb4uyGbZmQ2Qs9zo7cQLA2yJtRJE2aPYS6d6KtObISwDQRaQNKdJGzR4i3VOR1hq5eQVAV5E2ytZslrzH/czOnADQVbQNKtoGTh7R7p1oa4v8nAAwRLTNszUbKMe4d6lCADBMxI20NZspj7lfqcYrAIaJunFF3ehZJ%2Bo9EXUNsQcnAAwXdXNtzQZbnXuTygQAU0TeaFuz2VbjfgQBwETRN93WbLy7cw/CnwQA09mEmc09B58JAJbIsCG3ZlPOzn0GzwkAlsmyObdmg87GvQVfEwAslWmjvrFhx%2BRegnMEACHYvLnKvQPXCADCyLiRt2YzX8X9Au8RAISSdVO/sbmP5f6AfgQAIWXf6Fuz2ffiXoAxBABh7bDx3xgA5/jsYTwBQGg7DYJ7hsJHPmeYTwCQwq4D4qbaoPB5wnoCgDR2Hxr3dhsgPjuIRwCQTqVh8rPow8VnA3kIAFKqPGi%2BMmoQuebPGf5kJABIzVBiJYOfzAQAWxACzGTws4Pvq38A6MGGzCzuNXbhBIDtOA1gBIOf3QgAtiUE6MHgZ1cCgO0JAa4w%2BNmdAKAMIcARBj9VCADKEQI8YvBTjQCgLCFAawY/dQkAyhMCNRn8VCcA4P%2BEQA0GP/wgAOABMbAXQx8%2BEwDwghDIzeCH5wQAHCQGcjD04RgBABeIgVgMfThPAMCbxMAahj68RwBAR2JgLEMf%2BhEAMIgY6MPQhzEEAEwiCI4x8GEOAQCLCIIfDHxYQwBAILtHgWEPcQgASCJLHBjykIMAgI2MjgTDHfbxrbXWRAAA1PGP//772/fVPwQAMJ8AAICCBAAAFCQAAKAgAQAABQkAAChIAABAQd9b%2B/HvAVf/IADAeLeZ7wQAAAoSAABQkAAAgIIEAAAU9EcA%2BCIgAOztftY7AQCAggQAABQkAACgoA8B4HsAALCnn2e8EwAAKEgAAEBBAgAACvoUAL4HAAB7eTTbnQAAQEECAAAKehgAXgMAwB6ezXQnAABQkAAAgIKeBoDXAACQ26tZ7gQAAAoSAABQ0MsA8BoAAHL6aoY7AQCAgr4MAKcAAJDLkdntBAAAChIAAFDQoQDwGgAAcjg6s50AAEBBhwPAKQAAxHZmVjsBAICCTgWAUwAAiOnsjHYCAAAFnQ4ApwAAEMuV2ewEAAAKuhQATgEAIIarM9kJAAAUdDkAnAIAwFrvzOK3TgBEAACs8e4M9goAAAp6OwCcAgDAXD1mrxMAACioSwA4BQCAOXrN3G4nACIAAMbqOWu9AgCAgroGgFMAABij94ztfgIgAgCgrxGzdcgrABEAAH2Mmqm%2BAwAABQ0LAKcAAPCekbN06AmACACAa0bP0OGvAEQAAJwzY3b6DgAAFDQlAJwCAMAxs2bmtBMAEQAAr82clVNfAYgAAHhs9oyc/h0AEQAAH62YjUu%2BBCgCAOCHVTNx2b8CEAEAVLdyFi79Z4AiAICqVs/A5X8HYPUFAIDZIsy%2B5QHQWowLAQAzRJl5IQKgtTgXBABGiTTrwgRAa7EuDAD0FG3GhQqA1uJdIAB4V8TZFi4AWot5oQDgiqgzLWQAtBb3ggHAUZFnWdgAaC32hQOAV6LPsNAB0Fr8CwgAP8swu8L/gPd%2B%2B%2BXX31f/DADwTIbBfxP%2BBOBepgsLQC3ZZlSqAGgt3wUGYH8ZZ1O6H/ieVwIArJRx8N%2BkOwG4l/nCA5Bb9hmUOgBay/8BAJDPDrMn/S9wzysBAEbaYfDfpD8BuLfTBwNALLvNmK1%2BmXtOAwDoYbfBf7PlL3VPCABwxa6D/2arVwCP7P4BAtBfhdmx/S94z2kAAK9UGPw3ZX7Re0IAgHuVBv9NuV/4nhAAqK3i4L8p%2B4vfEwIAtVQe/DflL8A9IQCwN4P/Ty7EE2IAYA%2BG/mMuyheEAEBOBv9rLs4JYgAgNkP/OBfqIjEAEIOhf42L1oEYAJjL0H%2BfCziAIADoy8DvzwWdQBAAnGPgj%2BcCLyIKAH4w7Ndw0YMSCMAuDPiY/gcH0MWglX3R3gAAAABJRU5ErkJggg%3D%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+
+<title>团务时间助理</title>
+<style>
+  :root{ --red:#c8102e; --ink:#1f2937; --gray:#6b7280; --line:#e5e7eb; --bg:#f5f6f8; --ok:#059669; --warn:#d97706; }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body{ margin:0; font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); }
+  header{ background:#fff; padding:14px 16px 10px; box-shadow:0 1px 3px rgba(0,0,0,.06); position:sticky; top:0; z-index:10; }
+  header h1{ margin:0; font-size:19px; }
+  header p{ margin:4px 0 0; font-size:12px; color:var(--gray); }
+  nav{ display:flex; background:#fff; border-bottom:1px solid var(--line); position:sticky; top:64px; z-index:9; }
+  nav button{ flex:1; border:0; background:none; padding:12px 0; font-size:14px; color:var(--gray); border-bottom:2px solid transparent; }
+  nav button.on{ color:var(--red); border-bottom-color:var(--red); font-weight:600; }
+  main{ padding:14px; max-width:640px; margin:0 auto; }
+  .card{ background:#fff; border-radius:14px; padding:14px; margin-bottom:14px; box-shadow:0 1px 3px rgba(0,0,0,.05); }
+  .card h2{ margin:0 0 10px; font-size:15px; }
+  label{ display:block; font-size:12px; color:var(--gray); margin:10px 0 4px; }
+  input,select,textarea{ width:100%; padding:11px 12px; font-size:15px; border:1px solid var(--line); border-radius:10px; background:#fbfbfc; font-family:inherit; }
+  textarea{ font-size:13px; line-height:1.5; }
+  .btn{ display:block; width:100%; border:0; border-radius:12px; padding:14px; font-size:16px; font-weight:600; color:#fff; background:var(--red); margin-top:12px; }
+  .btn.ghost{ background:#eef0f3; color:var(--ink); font-weight:500; }
+  .grid{ display:grid; grid-template-columns:44px repeat(7,1fr); gap:4px; font-size:11px; }
+  .grid .hd{ text-align:center; color:var(--gray); padding:4px 0; }
+  .cell{ text-align:center; padding:10px 0; border-radius:8px; background:#eef0f3; color:#9aa1ab; font-size:11px; user-select:none; }
+  .cell.busy{ background:var(--red); color:#fff; font-weight:600; }
+  .row{ display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #f1f2f4; }
+  .row:last-child{ border-bottom:0; }
+  .row .t{ font-size:14px; } .row .s{ font-size:12px; color:var(--gray); margin-top:2px; }
+  .del{ color:var(--gray); font-size:13px; padding:4px 8px; }
+  .verdict{ font-size:17px; font-weight:700; margin-bottom:8px; }
+  .ok{ color:var(--ok); } .warn{ color:var(--warn); } .bad{ color:var(--red); }
+  .hint{ font-size:12px; color:var(--gray); line-height:1.6; }
+  .slot{ display:inline-block; background:#fdecef; color:var(--red); border-radius:8px; padding:6px 10px; margin:4px 6px 0 0; font-size:13px; }
+  .tab{ display:none; } .tab.on{ display:block; }
+  .mini{ font-size:12px; color:var(--gray); margin-top:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>团务时间助理</h1>
+  <p>图片 / AI 识别课表 · 判断新活该不该接</p>
+</header>
+<nav>
+  <button class="on" onclick="tab(0,this)">课表</button>
+  <button onclick="tab(1,this)">任务</button>
+  <button onclick="tab(2,this)">评估</button>
+  <button onclick="tab(3,this)">提醒</button>
+  <button onclick="tab(4,this)">备份</button>
+  <button onclick="tab(5,this)">设置</button>
+</nav>
+<main>
+
+  <!-- 课表 -->
+  <section class="tab on">
+    <div class="card">
+      <h2>① 粘贴文字，自动导入课表</h2>
+      <p class="hint">方式一：截图后「提取文字」粘贴；方式二：整张课表截不下时，用 <b>🤖 AI 识别</b> 一次传多张，自动拼成完整课表。每行一门课，例如：<br>
+      周一 1-2节 高等数学<br>周二 3-4节 英语 教学楼A101<br>周三 第5-6节 体育</p>
+      <textarea id="ttPaste" rows="6" placeholder="把课表文字粘到这里…"></textarea>
+      <button class="btn" onclick="importTTText()">自动识别并导入</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn ghost" onclick="document.getElementById('img_tt').click()">📷 图片识别（离线）</button>
+        <button class="btn ghost" onclick="document.getElementById('aiimg_tt').click()">🤖 AI 识别（可多张）</button>
+      </div>
+      <input type="file" accept="image/*" id="img_tt" style="display:none">
+      <input type="file" accept="image/*" id="aiimg_tt" multiple style="display:none">
+      <div class="mini" id="ttMsg"></div>
+    </div>
+    <div class="card">
+      <h2>② 手动微调（点一下＝有课）</h2>
+      <div class="grid" id="grid"></div>
+      <button class="btn ghost" onclick="resetTT()">清空课表</button>
+    </div>
+    <div class="card">
+      <h2>作息时间（可改）</h2>
+      <div id="periods"></div>
+    </div>
+  </section>
+
+  <!-- 任务 -->
+  <section class="tab">
+    <div class="card">
+      <h2>粘贴消息，自动识别任务</h2>
+      <p class="hint">把群里那段话原样粘进来，它自动拆出「做什么 / 何时截止 / 大概多久」。</p>
+      <textarea id="msgPaste" rows="5" placeholder="例如：请各班团支书本周五18点前把团日活动总结交到群里，预计要做2小时"></textarea>
+      <button class="btn" onclick="autoAddTask()">识别并加入任务</button>
+      <button class="btn ghost" onclick="document.getElementById('img_msg').click()">📷 截图识别（离线）</button>
+      <button class="btn ghost" onclick="document.getElementById('aiimg_msg').click()">🤖 AI 识别</button>
+      <input type="file" accept="image/*" id="img_msg" style="display:none">
+      <input type="file" accept="image/*" id="aiimg_msg" multiple style="display:none">
+      <div class="mini" id="msgOut"></div>
+    </div>
+    <div class="card">
+      <h2>手动补一条（可选）</h2>
+      <label>要做什么</label><input id="t_task" placeholder="如：写团日活动总结">
+      <label>截止时间</label><input id="t_dl" type="datetime-local">
+      <label>预计耗时（小时）</label><input id="t_h" type="number" step="0.5" value="2">
+      <label>优先级</label><select id="t_p"><option>高</option><option selected>中</option><option>低</option></select>
+      <button class="btn ghost" onclick="addTask()">保存任务</button>
+    </div>
+    <div class="card">
+      <h2>已有任务（<span id="tcount">0</span>）</h2>
+      <div id="tlist"></div>
+    </div>
+  </section>
+
+  <!-- 评估 -->
+  <section class="tab">
+    <div class="card">
+      <h2 style="color:var(--red)">粘贴新任务，自动评估</h2>
+      <p class="hint">新活来了，整段粘进来，它自动识别并判断该不该接。</p>
+      <textarea id="evalPaste" rows="4" placeholder="例如：这周五前帮我做一份迎新晚会的PPT，大概要3小时，比较急"></textarea>
+      <button class="btn" onclick="autoEval()">自动识别并评估</button>
+      <button class="btn ghost" onclick="document.getElementById('img_eval').click()">📷 截图识别（离线）</button>
+      <button class="btn ghost" onclick="document.getElementById('aiimg_eval').click()">🤖 AI 识别</button>
+      <input type="file" accept="image/*" id="img_eval" style="display:none">
+      <input type="file" accept="image/*" id="aiimg_eval" multiple style="display:none">
+      <div class="mini" id="ocrStatus"></div>
+    </div>
+    <div class="card">
+      <h2>或手动填</h2>
+      <label>要做什么</label><input id="n_task" placeholder="如：做迎新晚会PPT">
+      <label>截止时间</label><input id="n_dl" type="datetime-local">
+      <label>预计耗时（小时）</label><input id="n_h" type="number" step="0.5" value="3">
+      <label>优先级</label><select id="n_p"><option selected>高</option><option>中</option><option>低</option></select>
+      <button class="btn ghost" onclick="evaluate()">▶ 评估</button>
+    </div>
+    <div class="card">
+      <h2>结论</h2>
+      <div id="result"><p class="hint">粘贴或填写后点评估。</p></div>
+      <button class="btn ghost" id="copyBtn" style="display:none" onclick="copyResult()">📋 复制结果</button>
+    </div>
+    <div class="card">
+      <h2>🤖 接了之后：转交给 AI</h2>
+      <p class="hint">内嵌的 AI 先给你一份「任务简报」，再生成一段<b>可直接发给 ima（我）的指令</b>。<br>
+      你点一下复制 → 粘给我 → 我会先问你「需不需要我来做、打算怎么做」，再动手。</p>
+      <textarea id="briefInput" rows="3" placeholder="把任务原文粘这里，或点下面按钮用刚才评估的那条"></textarea>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <button class="btn ghost" onclick="useEvalTask()">↩ 用刚才评估的任务</button>
+        <button class="btn" onclick="genBrief()">🤖 生成任务简报</button>
+        <button class="btn ghost" onclick="genDraft()">✍️ 让 AI 直接起草初稿</button>
+      </div>
+      <input id="imaExtra" placeholder="补充要求（可选）：如 20页PPT / 5分钟讲稿 / 正式风格 / 交到群里…">
+      <button class="btn" onclick="genImaPrompt()">🎯 生成「给 ima 的提示词」（一键复制）</button>
+      <p class="hint" style="margin:6px 0 0">小技巧：任务里直接写「这个交给 ima 做」，点上面「生成任务简报」就会自动走这一条。</p>
+      <div id="briefOut" class="mini"></div>
+      <button class="btn ghost" id="briefCopy" style="display:none" onclick="copyBrief()">📋 复制，发给 AI 助手（ima）</button>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <button class="btn" onclick="shareBrief()">📤 一键分享到…（ima / 微信）</button>
+      </div>
+      <div class="mini" style="margin:8px 0 4px">或<b>直接跳到网页版 AI</b>（自动带上这段任务，不用复制）：</div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">
+        <button class="btn ghost" onclick="jumpAI('deepseek')">DeepSeek</button>
+        <button class="btn ghost" onclick="jumpAI('kimi')">Kimi</button>
+        <button class="btn ghost" onclick="jumpAI('qwen')">通义千问</button>
+        <button class="btn ghost" onclick="jumpAI('doubao')">豆包</button>
+        <button class="btn ghost" onclick="jumpAI('chatglm')">智谱清言</button>
+        <button class="btn ghost" onclick="jumpAI('chatgpt')">ChatGPT</button>
+      </div>
+      <div class="mini" id="jumpStatus"></div>
+    </div>
+  </section>
+
+  <!-- 提醒 -->
+  <section class="tab">
+    <div class="card">
+      <h2>⏰ 提醒</h2>
+      <p class="hint">两种方式，<b>建议都开</b>：<br>
+      ① <b>浏览器提醒</b>：网页开着（切到后台也行）到点弹通知；<br>
+      ② <b>加入手机日历</b>：导出到系统日历后，<b>关掉网页也会响</b>（最稳）。</p>
+      <button class="btn" onclick="askNotify()">🔔 开启浏览器通知</button>
+      <button class="btn" onclick="exportICS('open')">📅 一键加入手机日历（自动跳转）</button>
+      <button class="btn ghost" onclick="exportICS('download')">⬇️ 下载 .ics 文件</button>
+      <div class="mini" id="notifyStatus"></div>
+    </div>
+    <div class="card">
+      <h2>到点提醒（按时间自动排序）</h2>
+      <div id="remindList"><p class="hint">还没有任务。</p></div>
+    </div>
+    <div class="card">
+      <h2>默认提前量</h2>
+      <p class="hint">新建任务默认用哪个；<b>会议/讲座/面试类会自动用「提前30分钟」</b>。每个任务在「任务」页也能单独改。</p>
+      <select id="defRemind" onchange="saveDefRemind()">
+        <option value="day8">截止当天早上 8:00</option>
+        <option value="m30">截止前 30 分钟</option>
+        <option value="m60">截止前 1 小时</option>
+        <option value="h2">截止前 2 小时</option>
+        <option value="d1_8">提前一天早上 8:00</option>
+        <option value="at">截止那一刻</option>
+        <option value="none">不提醒</option>
+      </select>
+    </div>
+    <div class="card">
+      <h2>🖥️ 与电脑提醒器同步</h2>
+      <p class="hint">电脑上开着「团务提醒器」时，点下面按钮把任务写成文件，提醒器就照着它<b>定时推送到你手机飞书</b>。<br>
+      电脑关机也不怕——开机后会把错过的提醒<b>补发</b>给你。</p>
+      <button class="btn" onclick="saveTaskFile()">💾 保存任务文件（覆盖「任务数据.json」）</button>
+      <div class="mini" id="syncStatus">首次会让你选保存位置：选到「团务提醒器」同一个文件夹，文件名保持 任务数据.json。</div>
+    </div>
+  </section>
+
+  <!-- 备份 -->
+  <section class="tab">
+    <div class="card">
+      <h2>导出备份</h2>
+      <button class="btn" onclick="exportData()">生成备份码</button>
+      <label>备份码（长按可复制）</label>
+      <textarea id="backupCode" rows="4"></textarea>
+    </div>
+    <div class="card">
+      <h2>导入备份</h2>
+      <textarea id="importCode" rows="4" placeholder="把备份码粘到这里"></textarea>
+      <button class="btn" onclick="importData()">导入</button>
+    </div>
+    <div class="card"><button class="btn ghost" onclick="clearAll()">清空全部数据</button></div>
+  </section>
+
+  <!-- 设置 -->
+  <section class="tab">
+    <div class="card">
+      <h2>🤖 AI 识别设置（可选）</h2>
+      <p class="hint">不填也能用（📷 离线图片识别）。想<b>一次传多张、识别更准</b>，就填一个<b>视觉大模型</b>的 Key。<br>
+      Key 只存在你自己手机浏览器里（本地保存），不会发给任何人，也不会上传到我的服务器。</p>
+      <label>服务商</label>
+      <select id="ai_preset" onchange="applyPreset()">
+        <option value="zhipu">智谱 GLM-4V-Flash（免费额度，推荐）</option>
+        <option value="qwen">通义千问 qwen-vl-max（阿里云）</option>
+        <option value="silicon">硅基流动 SiliconFlow</option>
+        <option value="ark">火山方舟 · 豆包</option>
+        <option value="moonshot">Moonshot Kimi 视觉</option>
+        <option value="openrouter">OpenRouter（国外模型）</option>
+      </select>
+      <label>接口地址</label><input id="ai_url" placeholder="https://...">
+      <label>模型名</label><input id="ai_model" placeholder="glm-4v-flash">
+      <label>API Key</label><input id="ai_key" placeholder="粘贴你的 Key（只存本机）">
+      <div style="margin:10px 0"><a id="ai_key_url" class="mini" href="#" target="_blank">👉 点这里去申请 Key</a></div>
+      <button class="btn" onclick="saveAI()">保存</button>
+      <button class="btn ghost" onclick="testAI()">测试连接</button>
+      <div class="mini" id="aiStatus"></div>
+    </div>
+    <div class="card">
+      <h2>怎么用 AI 传多张课表图</h2>
+      <p class="hint">回「课表」页 → 点 <b>🤖 AI 识别（可多张）</b> → 一次选中所有课表截图 → 它自动拼成完整课表，再点导入。<br>
+      消息、新任务同理，在「任务」「评估」页点 <b>🤖 AI 识别</b> 即可。</p>
+    </div>
+    <div class="card">
+      <h2>📱 把它变成手机 App（推荐）</h2>
+      <p class="hint">这页面本身就能"装"成 App：装好后有<b>图标</b>、<b>全屏打开</b>、还能<b>后台弹通知</b>。</p>
+      <button class="btn" onclick="tryInstall()">📲 一键安装到桌面</button>
+      <p class="hint" style="margin-top:8px">
+      <b>iPhone</b>：用 Safari 打开 → 点底部「分享」→「添加到主屏幕」。<br>
+      <b>安卓</b>：用 Chrome 打开 → 右上角「⋮」→「安装应用 / 添加到主屏幕」。</p>
+      <div class="mini" id="installStatus"></div>
+    </div>
+    <div class="card">
+      <h2>☁️ 消息提醒：推到手机（二选一）</h2>
+      <p class="hint">在飞书里建一个「群机器人」，把它的 Webhook 贴下面，本页的提醒就会<b>推到手机飞书</b>（有提示音、能留记录）。<br>
+      ⚠️ 前提：这个网页得开着（手机或电脑挂着都行）。真正"关掉也响"的用上面的<b>日历</b>。</p>
+      <label>① 微信（推荐，不用装东西）：PushPlus Token</label>
+      <input id="wx_token" placeholder="去 pushplus.plus 微信扫码后，把 token 复制过来">
+      <p class="hint">拿 token 方法：打开 pushplus.plus → 微信扫码登录 → 首页就有你的 token。</p>
+      <label>② 飞书机器人 Webhook（需在电脑版飞书里添加）</label>
+      <input id="fs_hook" placeholder="https://open.feishu.cn/open-apis/bot/v2/hook/......">
+      <button class="btn ghost" onclick="saveFS()">保存</button>
+      <button class="btn ghost" onclick="testFS()">发送测试消息</button>
+      <div class="mini" id="fsStatus"></div>
+      <p class="hint">两个都填就都推。⚠️ 前提：网页得开着；想「关掉也响」请用系统日历或云端提醒。</p>
+    </div>
+    <div class="card">
+      <h2>☁️ 云端提醒（GitHub，电脑不用开机）</h2>
+      <p class="hint">把任务同步到 GitHub，让 GitHub 的**免费定时任务**替你盯着，到点推你手机飞书——<b>电脑开不开都无所谓</b>。<br>
+      需要一次性配置（照《云端提醒使用说明》做一遍）：建一个 GitHub 私有仓库 + 一个 Token，填在下面。</p>
+      <label>GitHub 用户名</label><input id="cl_owner" placeholder="例如 jiangchengbo">
+      <label>仓库名</label><input id="cl_repo" placeholder="例如 tuanwu-remind">
+      <label>分支</label><input id="cl_branch" placeholder="main">
+      <label>Token（只给这个仓库 Contents 读写权限）</label><input id="cl_token" placeholder="github_pat_...">
+      <button class="btn ghost" onclick="saveCloud()">保存</button>
+      <button class="btn" onclick="cloudUpload()">☁️ 上传任务到云端</button>
+      <div class="mini" id="cloudStatus">配置好后，每次改完任务点一下这个按钮即可。</div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+const DAYS=['周一','周二','周三','周四','周五','周六','周日'];
+let PERIODS={'1-2':['08:00','09:40'],'3-4':['10:00','11:40'],'5-6':['13:00','14:40'],'7-8':['15:00','16:40'],'9-10':['18:00','19:40'],'11-12':['19:50','21:30']};
+let PKEYS=Object.keys(PERIODS);
+
+let S={tt:{},tasks:[],periods:{}};
+function load(){ try{ const s=JSON.parse(localStorage.getItem('tuanwu')||'{}'); if(s.tt) S=s;
+  if(!S.periods||!Object.keys(S.periods).length) S.periods=JSON.parse(JSON.stringify(PERIODS));
+  PKEYS=Object.keys(S.periods); }catch(e){} }
+function save(){ localStorage.setItem('tuanwu', JSON.stringify(S)); }
+function tab(i,el){ document.querySelectorAll('.tab').forEach((t,k)=>t.classList.toggle('on',k===i));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on')); el.classList.add('on'); }
+function $(id){ return document.getElementById(id); }
+
+// ================= 文字解析 =================
+function pkeyFromNums(a,b){
+  for(const k of PKEYS){ const [x,y]=k.split('-').map(Number); if(a>=x && a<=y) return k; }
+  return null;
+}
+function normDay(s){
+  const m=s.match(/周\s*([一二三四五六日天])|星期\s*([一二三四五六日天])/);
+  if(!m) return null;
+  let d=m[1]||m[2]; if(d==='天') d='日';
+  return '周'+d;
+}
+// 解析课表文字 → [{day,period,course}]
+function parseTTText(text){
+  const out=[];
+  text.split(/[\n\r]+/).forEach(line=>{
+    line=(line||'').trim(); if(!line) return;
+    const day=normDay(line); if(!day) return;
+    let p=null;
+    let m=line.match(/第?\s*(\d{1,2})\s*[-~—－、,，至到]\s*(\d{1,2})\s*节/) ||
+          line.match(/第?\s*(\d{1,2})\s*[-~—－、,，至到]\s*(\d{1,2})/) ;
+    if(m){ p=pkeyFromNums(parseInt(m[1],10), parseInt(m[2],10)); }
+    else { const m2=line.match(/第?\s*(\d{1,2})\s*节/); if(m2) p=pkeyFromNums(parseInt(m2[1],10), parseInt(m2[1],10)); }
+    if(!p) return;
+    let course=line
+      .replace(/周\s*[一二三四五六日天]/,'').replace(/星期\s*[一二三四五六日天]/,'')
+      .replace(/第?\s*\d{1,2}\s*[-~—－、,，至到]\s*\d{1,2}\s*节?/,'')
+      .replace(/第?\s*\d{1,2}\s*节/,'')
+      .replace(/^[\s:：,，、-]+/,'').trim();
+    out.push({day, period:p, course:course||'课程'});
+  });
+  return out;
+}
+function addDays(d,n){ const x=new Date(d.getTime()); x.setDate(x.getDate()+n); return x; }
+function pad(n){ return String(n).padStart(2,'0'); }
+function isoDate(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+// 解析一条消息 → {task,deadline,hours,priority}
+function parseMsg(text){
+  const t=(text||'').trim();
+  const today=new Date();
+  const cur=today.getDay();
+  const map={'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'日':0,'天':0};
+  let dstr='', hm='';
+
+  // 明确日期：X月X日
+  let m=t.match(/(\d{1,2})\s*月\s*(\d{1,2})\s*[日号]/);
+  if(m){ dstr=isoDate(new Date(today.getFullYear(), +m[1]-1, +m[2])); }
+  else {
+    const m2=t.match(/(?:^|[^\d])(\d{1,2})\s*[/.\-]\s*(\d{1,2})(?:[^\d]|$)/);
+    if(m2){ const mm=+m2[1], dd=+m2[2]; if(mm<=12 && dd<=31) dstr=isoDate(new Date(today.getFullYear(), mm-1, dd)); }
+  }
+  if(!dstr){
+    if(/后天/.test(t)) dstr=isoDate(addDays(today,2));
+    else if(/明天|明日/.test(t)) dstr=isoDate(addDays(today,1));
+    else if(/今天|今日/.test(t)) dstr=isoDate(today);
+    else {
+      const w=t.match(/(下+)?\s*(?:周|星期)\s*([一二三四五六日天])/);
+      if(w){ const target=map[w[2]]; let diff=(target-cur+7)%7; if(w[1]) diff+=7*w[1].length;
+        dstr=isoDate(addDays(today,diff)); }
+    }
+  }
+  // 时间
+  let hour=null,min=null;
+  const hmv=t.match(/(\d{1,2})\s*[:：]\s*(\d{2})/);
+  if(hmv){ hour=+hmv[1]; min=+hmv[2]; }
+  else { const hv=t.match(/(\d{1,2})\s*点/); if(hv){ hour=+hv[1]; min=0; } }
+  if(hour!==null && /下午|晚上|傍晚|夜里/.test(t) && hour<12) hour+=12;
+  if(hour!==null && /中午/.test(t) && hour<11) hour+=12;
+  if(hour!==null) hm=pad(hour)+':'+pad(min||0);
+  const deadline = dstr ? (dstr+'T'+(hm||'18:00')) : '';
+
+  // 耗时
+  let hours=2;
+  const hh=t.match(/(\d+(?:\.\d+)?|半)\s*(?:个)?\s*小时/); if(hh) hours = hh[1]==='半'?0.5:parseFloat(hh[1]);
+  else { const mm=t.match(/(\d+(?:\.\d+)?|半)\s*分钟/); if(mm) hours = mm[1]==='半'?0.5:Math.max(0.5, Math.round(+mm[1]/60*2)/2); }
+
+  // 优先级
+  let priority='中';
+  if(/不急|有空|随意/.test(t)) priority='低';
+  else if(/加急|紧急|尽快|马上|立刻|务必|比较急|很急|有点急|急/.test(t)) priority='高';
+
+  // 任务名：取第一句并清洗
+  let task=t.split(/[。！!？?\n]/)[0];
+  task=task
+    .replace(/^(?:通知|提醒|记得|请|麻烦|辛苦|帮忙|帮我|拜托|各位|各班|全班|全体|各支部|团支书|团支部|班长|同学们?|大家|各位同学)+[\s，,、：:]*/,'')
+    .replace(/(下+|本|这|那)?\s*(?:周|星期)\s*[一二三四五六日天]/g,'')
+    .replace(/\d{1,2}\s*月\s*\d{1,2}\s*[日号]/g,'')
+    .replace(/今天|明天|后天|今日|明日/g,'')
+    .replace(/上午|下午|晚上|中午|早上|傍晚/g,'')
+    .replace(/\d{1,2}\s*[:：]\s*\d{2}|\d{1,2}\s*点/g,'')
+    .replace(/(预计|大概|大约|约|需要|需|要做|要花|要用|要|花|用)(?=\s*\d)/g,'')
+    .replace(/(?:每人|人均|平均)?\s*(?:\d+(?:\.\d+)?|半)\s*(?:个)?\s*(?:小时|钟头|分钟|天)(?:左右|以内|之内)?/g,'')
+    .replace(/[，,]?\s*(比较急|很急|有点急|急|紧急|重要|尽快|务必|加急)/g,'')
+    .replace(/截止日期|截止|期限|最迟|不迟于|为止|之前|以前|以内|前/g,' ')
+    .replace(/(预计|大概|大约|要做|要花|要|需|需要|本|这|那)(?=[\s，,。;；、]|$)/g,'')
+    .replace(/^[\s，,、；;。]+/,'')
+    .replace(/[\s，,、；;。]+$/,'')
+    .replace(/\s+/g,' ').trim();
+  if(task.length>24){ const c=task.split(/[，,]/)[0].trim(); task=(c&&c.length>=4)?c:task.slice(0,24); }
+  if(!task) task=t.slice(0,20);
+  // 二次清洗：按分隔符切词，丢掉残留的填充词
+  const STOPS=/^(?:预计|大概|大约|约|要做|要花|需|需要|本|这|那|麻烦|辛苦|请|帮我|帮忙|记得|通知|提醒|务必|按时|准时|尽快|哈|哦|呀|截止|于)+$/;
+  task=task.split(/[\s，,、；;。:：]+/).filter(w=>w && !STOPS.test(w)).join(' ').trim();
+  if(!task) task='（未命名任务）';
+  return {task, deadline, hours, priority};
+}
+
+// ================= 课表 =================
+function importTTText(){
+  const text=$('ttPaste').value;
+  const list=parseTTText(text);
+  if(!list.length){ $('ttMsg').textContent='没识别到，检查一下每行是否含"周X"和"X-Y节"'; return; }
+  list.forEach(it=>{ S.tt[it.day+'|'+it.period]=1; });
+  // 顺带把课程名记下来（存到 ttName）
+  S.ttName=S.ttName||{};
+  list.forEach(it=>{ S.ttName[it.day+'|'+it.period]=it.course; });
+  save(); renderGrid();
+  $('ttMsg').textContent='已导入 '+list.length+' 节课：'+list.map(x=>x.day+x.period).join('、');
+}
+function renderGrid(){
+  const g=$('grid'); g.innerHTML='';
+  g.appendChild(el('div','hd','')); DAYS.forEach(d=>g.appendChild(el('div','hd',d.slice(1))));
+  PKEYS.forEach(p=>{
+    g.appendChild(el('div','hd',p));
+    DAYS.forEach(d=>{
+      const busy=S.tt[d+'|'+p];
+      const c=el('div','cell'+(busy?' busy':''),'');
+      c.textContent = busy ? ((S.ttName&&S.ttName[d+'|'+p])? S.ttName[d+'|'+p].slice(0,4):'有课') : '';
+      c.onclick=()=>{ if(busy){ delete S.tt[d+'|'+p]; if(S.ttName) delete S.ttName[d+'|'+p]; } else S.tt[d+'|'+p]=1; save(); renderGrid(); };
+      g.appendChild(c);
+    });
+  });
+}
+function el(t,c,x){ const e=document.createElement(t); e.className=c; if(x!==undefined) e.textContent=x; return e; }
+function resetTT(){ if(confirm('清空课表？')){ S.tt={}; S.ttName={}; save(); renderGrid(); } }
+function renderPeriods(){
+  const box=$('periods'); box.innerHTML='';
+  PKEYS.forEach(p=>{
+    const d=document.createElement('div'); d.style.cssText='display:flex;gap:8px;align-items:center;margin:6px 0';
+    const lab=document.createElement('span'); lab.textContent=p+'节'; lab.style.width='52px'; lab.style.fontSize='13px';
+    const i1=document.createElement('input'); i1.type='time'; i1.value=S.periods[p][0];
+    i1.addEventListener('change',()=>{ S.periods[p][0]=i1.value; save(); });
+    const i2=document.createElement('input'); i2.type='time'; i2.value=S.periods[p][1];
+    i2.addEventListener('change',()=>{ S.periods[p][1]=i2.value; save(); });
+    d.append(lab,i1,i2); box.appendChild(d);
+  });
+}
+
+// ================= 任务 =================
+function autoAddTask(){
+  const text=$('msgPaste').value.trim();
+  if(!text){ alert('先粘贴消息'); return; }
+  const o=parseMsg(text);
+  o.remind=suggestRemind(text);
+  S.tasks.push(o); save(); renderTasks();
+  $('msgPaste').value='';
+  $('msgOut').textContent='已识别：'+o.task+' ｜ 截止 '+(fmt(o.deadline)||'未识别')+' ｜ 约'+o.hours+'h ｜ '+o.priority;
+}
+function addTask(){
+  const t=$('t_task').value.trim(); if(!t){ alert('先填"要做什么"'); return; }
+  S.tasks.push({task:t, deadline:$('t_dl').value, hours:parseFloat($('t_h').value)||2, priority:$('t_p').value, remind:(S.defRemind||'day8')});
+  save(); renderTasks(); ['t_task','t_dl'].forEach(id=>$(id).value='');
+}
+function renderTasks(){
+  const box=$('tlist'); box.innerHTML=''; $('tcount').textContent=S.tasks.length;
+  if(!S.tasks.length){ box.innerHTML='<p class="hint">还没有任务</p>'; renderReminders(); return; }
+  S.tasks.forEach((t,i)=>{
+    const row=document.createElement('div'); row.className='row';
+    const info=document.createElement('div');
+    info.innerHTML='<div class="t">'+t.task+'</div><div class="s">截止 '+(fmt(t.deadline)||'未填')+' · 约'+t.hours+'小时 · '+t.priority+' · ⏰ '+remindLabel(remindTimeOf(t))+'</div>';
+    const sel=document.createElement('select'); sel.style.marginTop='6px';
+    REMIND_OPTS.forEach(o=>{ const op=document.createElement('option'); op.value=o.v; op.textContent='提醒：'+o.t; if((t.remind||'day8')===o.v) op.selected=true; sel.appendChild(op); });
+    sel.onchange=()=>{ t.remind=sel.value; if(S.fired) delete S.fired[fkey(t)]; save(); renderTasks(); };
+    info.appendChild(sel);
+    const d=document.createElement('div'); d.className='del'; d.textContent='删除';
+    d.onclick=()=>{ S.tasks.splice(i,1); save(); renderTasks(); };
+    const cal=document.createElement('div'); cal.textContent='📅 日历'; cal.title='把这条加到手机日历';
+    cal.style.cssText='cursor:pointer;font-size:13px;color:#2563eb;white-space:nowrap;margin-right:8px';
+    cal.onclick=()=>exportOne(i);
+    const btns=document.createElement('div'); btns.style.cssText='display:flex;align-items:center';
+    btns.appendChild(cal); btns.appendChild(d);
+    row.appendChild(info); row.appendChild(btns); box.appendChild(row);
+  });
+  renderReminders();
+}
+function fmt(s){ if(!s) return ''; const d=new Date(s); if(isNaN(d)) return s;
+  return pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
+
+// ================= 评估 =================
+function toMin(s){ const [h,m]=s.split(':').map(Number); return h*60+m; }
+function phours(p){ const [a,b]=S.periods[p]; return (toMin(b)-toMin(a))/60; }
+function autoEval(){
+  const text=$('evalPaste').value.trim();
+  if(!text){ alert('先粘贴新任务'); return; }
+  const o=parseMsg(text);
+  $('n_task').value=o.task; $('n_dl').value=o.deadline; $('n_h').value=o.hours; $('n_p').value=o.priority;
+  evaluate();
+  window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+}
+function evaluate(){
+  const t=$('n_task').value.trim(); if(!t){ alert('先填"要做什么"'); return; }
+  const dlv=$('n_dl').value, hours=parseFloat($('n_h').value)||1.5, pri=$('n_p').value;
+  const now=new Date();
+  const dl=dlv?new Date(dlv):null;
+  const endDate = dl? new Date(dl.getFullYear(),dl.getMonth(),dl.getDate()) : new Date(now.getFullYear(),now.getMonth(),now.getDate()+7);
+  const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  let days=Math.round((endDate-today)/86400000); days=Math.max(days,1);
+  let free=[];
+  for(let k=0;k<=days;k++){
+    const d=new Date(today.getTime()+k*86400000);
+    const dname=DAYS[(d.getDay()+6)%7];
+    PKEYS.forEach(p=>{
+      if(S.tt[dname+'|'+p]) return;
+      if(k===0){ const a=toMin(S.periods[p][0]); const sdt=new Date(d); sdt.setHours(Math.floor(a/60), a%60,0,0); if(sdt<=now) return; }
+      free.push({d,dname,p});
+    });
+  }
+  const totalFree=free.reduce((s,f)=>s+phours(f.p),0);
+  let demand=0, conflicts=[];
+  S.tasks.forEach(x=>{
+    const xd=x.deadline?new Date(x.deadline):null;
+    if(!xd || new Date(xd.getFullYear(),xd.getMonth(),xd.getDate())<=endDate){
+      demand+=parseFloat(x.hours)||0;
+      if(xd && Math.abs((new Date(xd.getFullYear(),xd.getMonth(),xd.getDate())-endDate)/86400000)<=2) conflicts.push(x.task);
+    }
+  });
+  const remaining=totalFree-demand, ratio= remaining>0.05? hours/remaining : 99;
+  let v,cls,why;
+  if(hours<=remaining){ v='✅ 建议接'; cls='ok'; why='截止前空档够用，接得下。'; }
+  else if(hours<=remaining*1.3){ v='⚠️ 谨慎接'; cls='warn'; why='空档比较紧，接了要牺牲休息/压缩其他事。'; }
+  else { v='❌ 建议协商延后或推掉'; cls='bad'; why='截止前空档明显不够，硬接大概率熬夜或误期。'; }
+  let plan=[],acc=0;
+  for(const f of free){ if(acc>=hours) break; const [a,b]=S.periods[f.p];
+    plan.push(pad(f.d.getMonth()+1)+'-'+pad(f.d.getDate())+' '+f.dname+' '+a+'-'+b); acc+=phours(f.p); }
+  let html='<div class="verdict '+cls+'">'+v+'</div><p class="hint">'+why+'</p>';
+  html+='<p class="hint" style="margin-top:10px">截止前空档 <b>'+totalFree.toFixed(1)+'h</b> ｜ 已有任务占用 <b>'+demand.toFixed(1)+'h</b> ｜ 剩余可接 <b>'+Math.max(remaining,0).toFixed(1)+'h</b></p>';
+  if(conflicts.length) html+='<p class="hint">⚠️ 与这些任务撞期：'+conflicts.join('、')+'</p>';
+  if(ratio<=1.3 && plan.length) html+='<div style="margin-top:10px">'+plan.map(p=>'<span class="slot">'+p+'</span>').join('')+'</div>';
+  else if(ratio>1.3) html+='<p class="hint" style="margin-top:10px">若非要接：需腾出约 '+(hours-Math.max(remaining,0)).toFixed(1)+'h，建议协商延后 / 拆分 / 找人分担。</p>';
+  $('result').innerHTML=html; $('copyBtn').style.display='block';
+  let plain='【新任务】'+t+'\n截止：'+(fmt(dlv)||'未填')+'　预计：约'+hours+'小时　优先级：'+pri+'\n';
+  plain+='\n【家底】空档 '+totalFree.toFixed(1)+'h ｜ 已占用 '+demand.toFixed(1)+'h ｜ 剩余可接 '+Math.max(remaining,0).toFixed(1)+'h\n';
+  plain+='\n【结论】'+v+'\n'+why+'\n';
+  if(conflicts.length) plain+='⚠️ 撞期：'+conflicts.join('、')+'\n';
+  if(ratio<=1.3 && plan.length) plain+='\n【建议安排】\n'+plan.map(p=>'· '+p).join('\n');
+  else if(ratio>1.3) plain+='\n【若非要接】需腾出约 '+(hours-Math.max(remaining,0)).toFixed(1)+'h，建议协商延后/拆分/找人分担。';
+  lastResultText=plain;
+}
+
+// ================= 复制 / 备份 =================
+let lastResultText='';
+function copyText(t){ if(!t){ alert('还没有内容'); return; }
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(()=>alert('已复制✅')).catch(()=>fallbackCopy(t)); }
+  else fallbackCopy(t); }
+function fallbackCopy(t){ const ta=document.createElement('textarea'); ta.value=t; ta.style.position='fixed'; ta.style.top='-1000px';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); alert('已复制✅'); }catch(e){ alert('复制失败，请长按手动复制'); } document.body.removeChild(ta); }
+function copyResult(){ copyText(lastResultText); }
+function exportData(){ try{ $('backupCode').value=btoa(unescape(encodeURIComponent(JSON.stringify(S)))); alert('已生成，长按文本框复制'); }catch(e){ alert('生成失败'); } }
+function importData(){ const c=$('importCode').value.trim(); if(!c){ alert('先粘贴备份码'); return; }
+  try{ const obj=JSON.parse(decodeURIComponent(escape(atob(c)))); S=obj;
+    if(!S.periods||!Object.keys(S.periods).length) S.periods=JSON.parse(JSON.stringify(PERIODS));
+    save(); renderGrid(); renderPeriods(); renderTasks(); alert('导入成功✅'); }catch(e){ alert('备份码无效'); } }
+function clearAll(){ if(confirm('确定清空课表和所有任务？')){ S={tt:{},tasks:[],periods:JSON.parse(JSON.stringify(PERIODS)),ttName:{}}; save(); renderGrid(); renderPeriods(); renderTasks(); alert('已清空'); } }
+
+// ================= 图片识别（浏览器内置 OCR，离线，无需AI/Key）=================
+let _libLoading=null;
+function loadTesseract(){
+  if(window.Tesseract) return Promise.resolve();
+  if(_libLoading) return _libLoading;
+  const cdns=[
+    'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js',
+    'https://unpkg.com/tesseract.js@5/dist/tesseract.min.js',
+    'https://cdn.bootcdn.net/ajax/libs/tesseract.js/5.1.0/tesseract.min.js'
+  ];
+  _libLoading=new Promise((res,rej)=>{
+    let i=0;
+    const tryNext=()=>{ if(i>=cdns.length){ rej('识别库没加载成功（可能无网络），请用手机「提取文字」后粘贴'); return; }
+      const s=document.createElement('script'); s.src=cdns[i++]; s.onload=()=>res(); s.onerror=tryNext; document.head.appendChild(s); };
+    tryNext();
+  });
+  return _libLoading;
+}
+async function ocrImage(file, onProgress){
+  await loadTesseract();
+  const res=await Tesseract.recognize(file,'chi_sim+eng',{ logger:m=>{ if(onProgress&&m.status) onProgress(m); } });
+  return (res&&res.data&&res.data.text)||'';
+}
+function showOcr(id,msg){ const el=$(id); if(el) el.textContent=msg; }
+async function imgToText(fileId,targetId,statusId,afterFn){
+  const f=$(fileId).files[0]; if(!f) return;
+  showOcr(statusId,'正在识别图片…（首次需联网加载识别库，约十几秒）');
+  try{
+    const text=await ocrImage(f,m=>{ if(m.status==='recognizing text') showOcr(statusId,'识别中… '+Math.round((m.progress||0)*100)+'%'); });
+    $(targetId).value=text;
+    showOcr(statusId,'识别完成 ✅ 请核对下方文字（表格顺序可能乱，可手动微调）');
+    afterFn();
+  }catch(e){ showOcr(statusId,'识别失败：'+e); }
+}
+function initOcrInputs(){
+  const wire=(fid,tid,sid,fn)=>{ const el=$(fid); if(!el) return;
+    el.addEventListener('change',e=>{ imgToText(fid,tid,sid,fn); e.target.value=''; }); };
+  wire('img_tt','ttPaste','ttMsg',importTTText);
+  wire('img_msg','msgPaste','msgOut',autoAddTask);
+  wire('img_eval','evalPaste','ocrStatus',autoEval);
+}
+initOcrInputs();
+
+// ================= AI 识别（可多张图片，需在「设置」填 Key）=================
+const AI_PRESETS={
+  zhipu:{url:'https://open.bigmodel.cn/api/paas/v4/chat/completions',model:'glm-4v-flash',keyUrl:'https://open.bigmodel.cn/usercenter/apikeys'},
+  qwen:{url:'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions',model:'qwen-vl-max',keyUrl:'https://bailian.console.aliyun.com/'},
+  silicon:{url:'https://api.siliconflow.cn/v1/chat/completions',model:'Qwen/Qwen2.5-VL-72B-Instruct',keyUrl:'https://cloud.siliconflow.cn/account/ak'},
+  ark:{url:'https://ark.cn-beijing.volces.com/api/v3/chat/completions',model:'',keyUrl:'https://console.volcengine.com/ark'},
+  moonshot:{url:'https://api.moonshot.cn/v1/chat/completions',model:'moonshot-v1-8k-vision-preview',keyUrl:'https://platform.moonshot.cn/console/api-keys'},
+  openrouter:{url:'https://openrouter.ai/api/v1/chat/completions',model:'google/gemini-2.0-flash-exp:free',keyUrl:'https://openrouter.ai/keys'}
+};
+function loadAI(){ try{ return JSON.parse(localStorage.getItem('ai_cfg')||'{}'); }catch(e){ return {}; } }
+function saveAI(silent){ localStorage.setItem('ai_cfg',JSON.stringify({url:$('ai_url').value.trim(),model:$('ai_model').value.trim(),key:$('ai_key').value.trim()})); if(!silent) alert('已保存 ✅（只存在本机）'); }
+function applyPreset(){ const p=AI_PRESETS[$('ai_preset').value]; if(!p) return;
+  $('ai_url').value=p.url; $('ai_model').value=p.model; $('ai_key_url').href=p.keyUrl; saveAI(true); }
+function initAICfg(){ const c=loadAI(); const p=AI_PRESETS.zhipu;
+  $('ai_url').value=c.url||p.url; $('ai_model').value=c.model||p.model; $('ai_key').value=c.key||''; $('ai_key_url').href=p.keyUrl; }
+function fileToDataURL(file){ return new Promise((res,rej)=>{
+  const r=new FileReader();
+  r.onload=()=>{ const img=new Image();
+    img.onload=()=>{ let w=img.width,h=img.height; const m=1600;
+      if(Math.max(w,h)>m){ const k=m/Math.max(w,h); w=Math.round(w*k); h=Math.round(h*k); }
+      const cv=document.createElement('canvas'); cv.width=w; cv.height=h; cv.getContext('2d').drawImage(img,0,0,w,h);
+      res(cv.toDataURL('image/jpeg',0.85)); };
+    img.onerror=()=>res(r.result); img.src=r.result; };
+  r.onerror=rej; r.readAsDataURL(file);
+}); }
+async function aiVision(files,prompt,statusId){
+  const cfg=loadAI();
+  if(!cfg.url||!cfg.key||!cfg.model) throw '还没配好，请到「设置」页填 API Key 和模型';
+  const content=[{type:'text',text:prompt}];
+  for(const f of files) content.push({type:'image_url',image_url:{url:await fileToDataURL(f)}});
+  if(statusId) showOcr(statusId,'AI 识别中…（'+files.length+' 张图，约十几秒）');
+  const resp=await fetch(cfg.url,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+cfg.key},
+    body:JSON.stringify({model:cfg.model,messages:[{role:'user',content:content}],temperature:0.1})});
+  if(!resp.ok){ const t=await resp.text(); throw '接口 '+resp.status+'：'+(t||'').slice(0,180); }
+  const data=await resp.json();
+  let txt=data&&data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content;
+  if(Array.isArray(txt)) txt=txt.map(x=>x.text||'').join('');
+  if(!txt) throw '没返回内容：'+JSON.stringify(data).slice(0,180);
+  return txt;
+}
+const AI_PROMPT_TT='这些是同一张大学课程表的多张截图，可能只截到部分区域。请把它们合并成一份完整课表。严格按每行一条输出，格式为「周X 第N-M节 课程名」，课程名不要带老师、教室、周次、课程代码，例如「周一 第1-2节 高等数学」。不要输出表头、说明或任何多余文字。';
+const AI_PROMPT_TEXT='请把图片里的所有文字按原样读出来（包括时间、称呼），不要总结、不要解释、不要改写，只输出文字本身。';
+async function aiTT(){ const el=$('aiimg_tt'); if(!el||!el.files.length){ alert('先选图片'); return; }
+  try{ const txt=await aiVision([].slice.call(el.files),AI_PROMPT_TT,'ttMsg'); $('ttPaste').value=txt; importTTText(); }
+  catch(e){ showOcr('ttMsg','AI 识别失败：'+e); } }
+async function aiMsg(){ const el=$('aiimg_msg'); if(!el||!el.files.length){ alert('先选图片'); return; }
+  try{ const txt=await aiVision([].slice.call(el.files),AI_PROMPT_TEXT,'msgOut'); $('msgPaste').value=txt; autoAddTask(); }
+  catch(e){ showOcr('msgOut','AI 识别失败：'+e); } }
+async function aiEval(){ const el=$('aiimg_eval'); if(!el||!el.files.length){ alert('先选图片'); return; }
+  try{ const txt=await aiVision([].slice.call(el.files),AI_PROMPT_TEXT,'ocrStatus'); $('evalPaste').value=txt; autoEval(); }
+  catch(e){ showOcr('ocrStatus','AI 识别失败：'+e); } }
+async function testAI(){ try{ const t=await aiVision([],'请只回复四个字：连接正常','aiStatus'); showOcr('aiStatus','✅ 连接成功，模型回：'+String(t).slice(0,30)); }
+  catch(e){ showOcr('aiStatus','❌ 失败：'+e); } }
+function initAIBtns(){ const bind=(id,fn)=>{ const e=$(id); if(!e) return; e.addEventListener('change',()=>{ fn(); e.value=''; }); };
+  bind('aiimg_tt',aiTT); bind('aiimg_msg',aiMsg); bind('aiimg_eval',aiEval); }
+initAICfg(); initAIBtns();
+
+// ================= 提醒 =================
+const REMIND_OPTS=[
+  {v:'day8',t:'截止当天早8:00'},{v:'m30',t:'提前30分钟'},{v:'m60',t:'提前1小时'},
+  {v:'h2',t:'提前2小时'},{v:'d1_8',t:'提前一天早8:00'},{v:'at',t:'截止时'},{v:'none',t:'不提醒'}
+];
+function remindTimeOf(t){
+  if(!t || !t.deadline) return null;
+  const dl=new Date(t.deadline); if(isNaN(dl.getTime())) return null;
+  const v=t.remind||'day8';
+  if(v==='none') return null;
+  if(v==='day8'){ const d=new Date(dl.getTime()); d.setHours(8,0,0,0); return d; }
+  if(v==='d1_8'){ const d=new Date(dl.getTime()); d.setDate(d.getDate()-1); d.setHours(8,0,0,0); return d; }
+  const off={'m30':30,'m60':60,'h2':120,'at':0}[v];
+  return new Date(dl.getTime()-(off||0)*60000);
+}
+function fmt2(d){ return pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
+function remindLabel(rt){ return rt? fmt2(rt) : '无'; }
+function fkey(t){ return (t.task||'')+'@'+(t.deadline||''); }
+function leftText(ms){ if(ms<=0) return '已到/已过'; const m=Math.round(ms/60000);
+  if(m<60) return m+' 分钟后'; const h=Math.floor(m/60), r=m%60; if(h<24) return h+' 小时'+(r?r+' 分':'')+'后';
+  return Math.floor(h/24)+' 天后'; }
+function renderReminders(){
+  const box=$('remindList'); if(!box) return;
+  const items=S.tasks.map(t=>({t:t,rt:remindTimeOf(t)})).filter(x=>x.rt).sort((a,b)=>a.rt-b.rt);
+  if(!items.length){ box.innerHTML='<p class="hint">还没有任务，或任务没设提醒。</p>'; return; }
+  const now=Date.now();
+  box.innerHTML=items.map(x=>{ const ms=x.rt.getTime()-now;
+    return '<div class="row"><div><div class="t">'+x.t.task+'</div><div class="s">⏰ '+fmt2(x.rt)+' · '+(ms<=0?'<b style="color:var(--red)">时间到</b>':leftText(ms))+' ｜ 截止 '+(fmt(x.t.deadline)||'未填')+'</div></div></div>';
+  }).join('');
+}
+function notify(title,body){
+  try{ if(window.Notification && Notification.permission==='granted') new Notification(title,{body:body}); }catch(e){}
+  showBanner(title+'　'+body);
+  fsPushSilent(title+'　'+body);
+}
+function showBanner(msg){
+  let b=document.getElementById('banner');
+  if(!b){ b=document.createElement('div'); b.id='banner';
+    b.style.cssText='position:fixed;left:8px;right:8px;top:8px;z-index:99;background:#e11d48;color:#fff;padding:12px 14px;border-radius:12px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.3)';
+    document.body.appendChild(b); }
+  b.textContent=msg; b.style.display='block';
+  clearTimeout(window._bt); window._bt=setTimeout(()=>{ b.style.display='none'; }, 20000);
+}
+function fireReminders(){
+  const now=Date.now(); let changed=false;
+  S.tasks.forEach(t=>{ const rt=remindTimeOf(t); if(!rt) return;
+    const d=rt.getTime()-now, k=fkey(t);
+    if(d<=0 && d>-12*3600000 && !(S.fired && S.fired[k])){
+      S.fired=S.fired||{}; S.fired[k]=1; changed=true;
+      notify('⏰ 团务提醒：'+t.task,'截止 '+(fmt(t.deadline)||'未知')+'，别忘啦');
+    }
+  });
+  if(changed) save();
+}
+function askNotify(){
+  if(!window.Notification){ showOcr('notifyStatus','这台设备/浏览器不支持系统通知，用「导出到手机日历」吧'); return; }
+  Notification.requestPermission().then(p=>{
+    showOcr('notifyStatus', p==='granted' ? '✅ 浏览器通知已开启（网页开着才提醒；建议再导日历）' : '⚠️ 未允许：'+p+'（到浏览器设置里允许本站通知）');
+  });
+}
+function saveDefRemind(){ S.defRemind=$('defRemind').value; save(); }
+function suggestRemind(text){ return /会议|开会|例会|参会|参加|培训|讲座|面试|报告会|大会|仪式|签到|见面会/.test(text||'') ? 'm30' : (S.defRemind||'day8'); }
+function icsClean(s){ return String(s||'').split(String.fromCharCode(10)).join(' ').split(String.fromCharCode(13)).join(' '); }
+function icsTime(d){ return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+'T'+pad(d.getHours())+pad(d.getMinutes())+'00'; }
+function hashKey(t){ const s=(t.task||'')+'|'+(t.deadline||''); let h=0; for(let i=0;i<s.length;i++){ h=((h<<5)-h+s.charCodeAt(i))>>>0; } return h.toString(36)+'-'+s.length; }
+function buildICS(list){
+  const CRLF=String.fromCharCode(13,10);
+  const evs=[];
+  list.forEach(t=>{ const rt=remindTimeOf(t); if(!rt||!t.deadline) return;
+    const end=new Date(rt.getTime()+15*60000);
+    evs.push(['BEGIN:VEVENT','UID:tn-'+hashKey(t)+'@tuanwu',
+      'DTSTAMP:'+icsTime(new Date()),'DTSTART:'+icsTime(rt),'DTEND:'+icsTime(end),
+      'SUMMARY:'+icsClean('⏰ '+t.task),
+      'DESCRIPTION:'+icsClean('截止 '+(fmt(t.deadline)||'')+'，预计'+t.hours+'小时'),
+      'BEGIN:VALARM','TRIGGER:PT0M','ACTION:DISPLAY','DESCRIPTION:'+icsClean(t.task),'END:VALARM','END:VEVENT'].join(CRLF));
+  });
+  if(!evs.length) return null;
+  return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//tuanwu-assistant//CN','CALSCALE:GREGORIAN'].concat(evs).concat('END:VCALENDAR').join(CRLF);
+}
+function icsURL(text){ return URL.createObjectURL(new Blob([text],{type:'text/calendar;charset=utf-8'})); }
+function icsFallbackLink(url,tip){
+  const box=$('notifyStatus'); if(!box) return; box.innerHTML='';
+  const lk=document.createElement('a');
+  lk.href=url; lk.textContent='👉 没自动跳？点这里打开日历文件 → 添加到日历';
+  lk.style.cssText='display:block;margin-top:8px;font-weight:700';
+  box.appendChild(lk);
+  const t2=document.createElement('div'); t2.textContent=tip; box.appendChild(t2);
+}
+function exportICS(mode){
+  const text=buildICS(S.tasks);
+  if(!text){ alert('还没有带截止时间的任务，先加几条吧'); return; }
+  const url=icsURL(text);
+  if(mode==='download'){
+    const a=document.createElement('a'); a.href=url; a.download='团务提醒.ics';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    showOcr('notifyStatus','已下载「团务提醒.ics」：点开它 → 添加到日历。');
+    return;
+  }
+  // 一键自动跳转：先试新标签打开（让系统识别 .ics），被拦截则当前页跳转
+  icsFallbackLink(url,'（iPhone 会直接弹「添加到日历」；安卓会下载，点文件选日历即可）');
+  let w=null;
+  try{ w=window.open(url,'_blank'); }catch(e){}
+  if(!w){ try{ location.href=url; }catch(e){ showOcr('notifyStatus','已生成文件，请点上面链接'); } }
+}
+function exportOne(i){
+  const t=S.tasks[i]; const text=buildICS([t]);
+  if(!text){ alert('这条没有截止时间，先补上'); return; }
+  const url=icsURL(text);
+  icsFallbackLink(url,'（只导这一条：'+t.task+'）');
+  let w=null;
+  try{ w=window.open(url,'_blank'); }catch(e){}
+  if(!w){ try{ location.href=url; }catch(e){} }
+}
+setInterval(()=>{ try{ fireReminders(); renderReminders(); }catch(e){} }, 30000);
+
+// ================= 接活转交 AI =================
+let lastBrief='';
+async function aiText(prompt,statusId){
+  const cfg=loadAI();
+  if(!cfg.url||!cfg.key||!cfg.model) throw '先去「设置」页填 API Key';
+  if(statusId) showOcr(statusId,'AI 思考中…（约十几秒）');
+  const resp=await fetch(cfg.url,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+cfg.key},
+    body:JSON.stringify({model:cfg.model,messages:[{role:'user',content:prompt}],temperature:0.6})});
+  if(!resp.ok){ const t=await resp.text(); throw '接口 '+resp.status+'：'+(t||'').slice(0,180); }
+  const data=await resp.json();
+  let txt=data&&data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content;
+  if(Array.isArray(txt)) txt=txt.map(x=>x.text||'').join('');
+  if(!txt) throw '没返回内容：'+JSON.stringify(data).slice(0,180);
+  return txt;
+}
+function briefPrompt(t){ return '你是团支书的事务助理。用户是上海海事大学「人工智能262」班团支书蒋丞博，现在接到这个任务：\n"""'+t+'"""\n请用简洁中文输出（不要客套、不要重复原话）：\n1) 任务理解：一句话说清要交什么\n2) 需要产出的成果：列点\n3) 硬性要求 / 注意事项\n4) 建议怎么安排时间\n5) 给AI助手的一段执行指令（让别人一看就能直接开做）'; }
+function useEvalTask(){
+  const t=$('n_task').value.trim(); if(!t){ alert('先去评估页填一条任务'); return; }
+  let s=t;
+  if($('n_dl').value) s+='（截止 '+$('n_dl').value.replace('T',' ')+'）';
+  if($('n_h').value) s+='，预计 '+$('n_h').value+' 小时';
+  if($('n_p').value) s+='，优先级'+$('n_p').value;
+  $('briefInput').value=s;
+}
+async function genBrief(){
+  const t0=$('briefInput').value.trim();
+  if(/给\s*ima|交给\s*ima|让\s*ima|ima\s*做|艾玛|给艾玛|交给?\s*AI\s*助手/im.test(t0)) return genImaPrompt();
+  const t=t0; if(!t){ alert('先把任务填上'); return; }
+  try{
+    const txt=await aiText(briefPrompt(t),'briefOut');
+    lastBrief='【要做的任务】'+t+'\n\n【AI 整理的任务简报】\n'+txt+'\n\n——请帮我完成这个任务。请先回答我：1) 需不需要你来做；2) 你打算怎么做、需要我提供什么材料。';
+    const out=$('briefOut'); out.style.whiteSpace='pre-wrap'; out.textContent=lastBrief;
+    $('briefCopy').style.display='block';
+  }catch(e){ showOcr('briefOut','AI 调用失败：'+e); }
+}
+async function genDraft(){
+  const t=$('briefInput').value.trim(); if(!t){ alert('先把任务填上'); return; }
+  try{
+    const txt=await aiText('请直接帮我起草下面这项任务的初稿，要能直接用（不要解释、不要客套）：\n'+t+'\n\n如果是PPT就给「大纲+每页要点」；如果是通知/总结/策划就给完整文案；如果是发言稿就给全文。','briefOut');
+    lastBrief=txt;
+    const out=$('briefOut'); out.style.whiteSpace='pre-wrap'; out.textContent=txt;
+    $('briefCopy').style.display='block';
+  }catch(e){ showOcr('briefOut','AI 调用失败：'+e); }
+}
+function copyBrief(){ copyText(lastBrief); }
+function imaPromptSys(task,extra){
+  return '你是提示词工程师。请为用户写一段【可以直接发给 ima.copilot（腾讯智能助手）的提示词】，让 ima 一次性高质量完成下面这个任务。\n\n'
+  +'用户背景：上海海事大学信息工程学院「人工智能262」班团支书蒋丞博。\n'
+  +'任务原文：\n"""'+task+'"""\n'
+  +(extra? ('用户补充要求：'+extra+'\n') : '')
+  +'\n输出的提示词必须依次包含：\n'
+  +'1) 开场一句：说明身份、身份背景与要办的事；\n'
+  +'2) 任务目标：要交什么、交给谁、用在哪；\n'
+  +'3) 交付物规格：按任务类型自动判断并写死规格（PPT 就给页数/每页要点/风格；发言稿就给时长/字数；通知就给格式；名单/表格就给字段；海报就给尺寸与文案）。\n'
+  +'4) 内容要点：列出必须覆盖的具体内容（尽量具体，能直接用）；\n'
+  +'5) 风格与禁忌：例如「不要客套、多用短句、口语化、正式严谨」等按场合选择；\n'
+  +'6) 收尾要求：先复述理解并给出提纲/结构，等我确认后再产出完整成品；不确定的地方先问我。\n\n'
+  +'严格要求：只输出这一整段提示词本身，不要任何解释、标题、前言后语或代码块符号。中文，条理清晰，每部分用序号分段。';
+}
+async function genImaPrompt(){
+  const t=$('briefInput').value.trim() || ($('n_task')? $('n_task').value.trim():'');
+  if(!t){ alert('先把任务填上（或去评估页填一条）'); return; }
+  const extra=$('imaExtra') ? $('imaExtra').value.trim() : '';
+  try{
+    const txt=await aiText(imaPromptSys(t,extra),'briefOut');
+    lastBrief=String(txt).trim();
+    const out=$('briefOut'); out.style.whiteSpace='pre-wrap'; out.textContent=lastBrief;
+    $('briefCopy').style.display='block';
+    copySilent(lastBrief);
+    showOcr('jumpStatus','✅ 提示词已生成，并已复制到剪贴板；粘给 ima（或点上面跳转/分享）即可。');
+  }catch(e){ showOcr('briefOut','AI 调用失败：'+e); }
+}
+
+// ================= 一键跳转 AI =================
+const AI_JUMP={
+  deepseek:'https://chat.deepseek.com/?q=',
+  kimi:'https://www.kimi.com/?q=',
+  qwen:'https://chat.qwen.ai/?q=',
+  doubao:'https://www.doubao.com/?q=',
+  chatglm:'https://chatglm.cn/?q=',
+  chatgpt:'https://chatgpt.com/?q=',
+  yuanbao:'https://yuanbao.tencent.com/?q='
+};
+const AI_JUMP_NAME={deepseek:'DeepSeek',kimi:'Kimi',qwen:'通义千问',doubao:'豆包',chatglm:'智谱清言',chatgpt:'ChatGPT',yuanbao:'腾讯元宝'};
+function currentBrief(){ return lastBrief || $('briefInput').value.trim(); }
+function copySilent(t){ try{ if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t); }catch(e){} }
+function jumpAI(k){
+  const txt=currentBrief();
+  if(!txt){ alert('先点「生成任务简报」，或把任务填上'); return; }
+  const base=AI_JUMP[k]; if(!base){ return; }
+  const q=txt.length>1500 ? txt.slice(0,1500) : txt;
+  copySilent(txt);
+  const url=base+encodeURIComponent(q);
+  const w=window.open(url,'_blank');
+  if(!w){ location.href=url; return; }
+  showOcr('jumpStatus','已跳转到 '+AI_JUMP_NAME[k]+'，并把这整段也复制到剪贴板了；若没自动填上，粘贴一下即可。');
+}
+function shareBrief(){
+  const txt=currentBrief();
+  if(!txt){ alert('先点「生成任务简报」，或把任务填上'); return; }
+  if(navigator.share){
+    navigator.share({title:'团务任务',text:txt}).catch(()=>{});
+  } else {
+    copyText(txt);
+    showOcr('jumpStatus','这台设备不支持系统分享，已复制到剪贴板了，去粘给 ima 就行。');
+  }
+}
+
+// ================= 安装成 App =================
+let _installEvt=null;
+window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); _installEvt=e; showOcr('installStatus','✅ 可以安装了，点上面按钮'); });
+function tryInstall(){
+  if(_installEvt){ _installEvt.prompt(); _installEvt=null; return; }
+  showOcr('installStatus','没自动弹安装框：iPhone 用 Safari「分享 → 添加到主屏幕」；安卓 Chrome 点「⋮ → 安装应用」。');
+}
+
+// ================= 飞书推送（可选，CORS 已验证可用）=================
+function fsCfg(){ try{ return JSON.parse(localStorage.getItem('fs_cfg')||'{}'); }catch(e){ return {}; } }
+function saveFS(){
+  localStorage.setItem('fs_cfg',JSON.stringify({
+    hook:(($('fs_hook')||{}).value||'').trim(),
+    wx:(($('wx_token')||{}).value||'').trim()
+  }));
+  alert('已保存 ✅');
+}
+async function fsSend(text){
+  const c=fsCfg(); if(!c.hook) throw '还没填飞书 Webhook';
+  const r=await fetch(c.hook,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({msg_type:'text',content:{text:text}})});
+  const j=await r.json().catch(function(){ return {}; });
+  if(j && j.code && j.code!==0) throw '飞书返回：'+(j.msg||'');
+  return true;
+}
+async function pushWX(text){
+  const c=fsCfg(); if(!c.wx) throw '还没填 PushPlus Token';
+  const r=await fetch('https://www.pushplus.plus/send',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({token:c.wx,title:'团务提醒',content:text,template:'txt'})});
+  const j=await r.json().catch(function(){ return {}; });
+  if(j && j.code && j.code!==200) throw 'PushPlus 返回：'+(j.msg||'');
+  return true;
+}
+async function testFS(){
+  const c=fsCfg(); const done=[];
+  try{
+    if(c.hook){ await fsSend('【团务时间助理】测试消息，收到说明配置成功 ✅'); done.push('飞书 ✅'); }
+    if(c.wx){ await pushWX('【团务时间助理】测试消息，收到说明配置成功 ✅'); done.push('微信 ✅'); }
+    if(!done.length) throw '还没填任何通道（微信 token 或飞书 Webhook）';
+    showOcr('fsStatus','已发送：'+done.join(' / ')+'　去看看收到没');
+  }catch(e){ showOcr('fsStatus','❌ '+e); }
+}
+function fsPushSilent(txt){
+  const c=fsCfg();
+  if(c.hook) fsSend(txt).catch(function(){});
+  if(c.wx) pushWX(txt).catch(function(){});
+}
+
+// ================= 与电脑提醒器同步 =================
+let _taskFileHandle=null;
+function taskFileJSON(){ return JSON.stringify({savedAt:new Date().toISOString(), tasks:S.tasks}, null, 2); }
+async function saveTaskFile(){
+  const data=taskFileJSON();
+  if(window.showSaveFilePicker){
+    try{
+      if(!_taskFileHandle){
+        _taskFileHandle=await window.showSaveFilePicker({suggestedName:'任务数据.json',
+          types:[{description:'JSON 文件',accept:{'application/json':['.json']}}]});
+      }
+      const w=await _taskFileHandle.createWritable(); await w.write(data); await w.close();
+      showOcr('syncStatus','✅ 已写入「任务数据.json」，电脑提醒器每 30 秒会自动读取。');
+      return;
+    }catch(e){ if(e && e.name==='AbortError') return; _taskFileHandle=null; }
+  }
+  const b=new Blob([data],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='任务数据.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  showOcr('syncStatus','已下载「任务数据.json」——把它放到提醒器同一个文件夹（同名覆盖）即可。');
+}
+
+// ================= 云端提醒（GitHub 定时任务）=================
+function loadCloud(){ try{ return JSON.parse(localStorage.getItem('cl_cfg')||'{}'); }catch(e){ return {}; } }
+function saveCloud(){
+  localStorage.setItem('cl_cfg',JSON.stringify({
+    owner:$('cl_owner').value.trim(), repo:$('cl_repo').value.trim(),
+    branch:($('cl_branch').value.trim()||'main'), token:$('cl_token').value.trim()
+  }));
+  alert('已保存 ✅（只存在本机）');
+}
+async function cloudUpload(){
+  const c=loadCloud();
+  if(!c.owner||!c.repo||!c.token){ alert('先把 用户名 / 仓库名 / Token 填好并保存'); return; }
+  const api='https://api.github.com/repos/'+c.owner+'/'+c.repo+'/contents/tasks.json';
+  const json=JSON.stringify({savedAt:new Date().toISOString(), tasks:S.tasks}, null, 2);
+  const content=btoa(unescape(encodeURIComponent(json)));
+  const H={'Authorization':'Bearer '+c.token,'Accept':'application/vnd.github+json','Content-Type':'application/json'};
+  showOcr('cloudStatus','正在上传…');
+  try{
+    let sha=null;
+    const r=await fetch(api+'?ref='+encodeURIComponent(c.branch),{headers:H});
+    if(r.ok){ const j=await r.json(); sha=j.sha; }
+    else if(r.status!==404){ throw '读取仓库出错 '+r.status+'（检查用户名/仓库/Token）'; }
+    const body={message:'更新任务 '+new Date().toLocaleString('zh-CN'), content:content, branch:c.branch};
+    if(sha) body.sha=sha;
+    const r2=await fetch(api,{method:'PUT',headers:H,body:JSON.stringify(body)});
+    if(!r2.ok){ const t=await r2.text(); throw '上传失败 '+r2.status+'：'+t.slice(0,180); }
+    showOcr('cloudStatus','✅ 已同步到云端！GitHub 每 5 分钟检查一次，到点推你飞书。');
+  }catch(e){ showOcr('cloudStatus','❌ '+e); }
+}
+
+// ---- init ----
+load(); $('defRemind').value=S.defRemind||'day8';
+(function initNotify(){ const c=fsCfg(); if($('fs_hook')) $('fs_hook').value=c.hook||''; if($('wx_token')) $('wx_token').value=c.wx||''; })();
+(function initCloud(){ const c=loadCloud(); if($('cl_owner')) $('cl_owner').value=c.owner||''; if($('cl_repo')) $('cl_repo').value=c.repo||''; if($('cl_branch')) $('cl_branch').value=c.branch||'main'; if($('cl_token')) $('cl_token').value=c.token||''; })();
+renderGrid(); renderPeriods(); renderTasks(); renderReminders();
+</script>
+</body>
+</html>
