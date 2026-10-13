@@ -130,7 +130,51 @@
     display:inline-block; background:rgba(79,196,140,.13); color:var(--accent-deep);
     border-radius:9px; padding:6px 10px; margin:4px 6px 0 0; font-size:13px;
   }
-  .tab{ display:none; } .tab.on{ display:block; }
+  .tab{ display:none; }
+  /* ===== 待办卡片 ===== */
+  .tcards{ display:flex; flex-direction:column; gap:10px; }
+  .tcard{
+    display:flex; gap:10px; align-items:flex-start; cursor:pointer; transition:.15s;
+    background:linear-gradient(165deg,#FFFFFF,#F7FCF9);
+    border:1px solid var(--line); border-radius:15px; padding:12px 12px 11px;
+    box-shadow:0 2px 8px rgba(60,120,95,.06);
+  }
+  .tcard:active{ transform:scale(.985); }
+  .tcard .chk{
+    flex:none; width:23px; height:23px; border-radius:50%; border:2px solid var(--accent-2);
+    display:flex; align-items:center; justify-content:center; margin-top:1px;
+    color:#fff; font-size:13px; line-height:1; background:#fff; transition:.15s;
+  }
+  .tcard .chk.on{ background:linear-gradient(135deg,var(--accent),var(--accent-2)); border-color:transparent; }
+  .tcard .bd{ flex:1; min-width:0; }
+  .tcard .tt{ font-size:14.5px; font-weight:600; line-height:1.45; word-break:break-word; }
+  .tcard .mt{ margin-top:7px; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .chip{
+    font-size:11.5px; padding:3px 8px; border-radius:8px; background:#EFF6F2; color:var(--gray);
+    border:1px solid #E6F0EA; white-space:nowrap;
+  }
+  .chip.time{ background:rgba(79,196,140,.14); color:var(--accent-deep); border-color:transparent; font-weight:600; }
+  .chip.late{ background:rgba(217,87,106,.13); color:var(--danger); border-color:transparent; font-weight:600; }
+  .chip.p-high{ background:rgba(217,87,106,.10); color:var(--danger); border-color:transparent; }
+  .chip.p-mid{ background:rgba(210,146,47,.13); color:var(--warn); border-color:transparent; }
+  .chip.p-low{ background:#EEF4F1; color:var(--gray); border-color:transparent; }
+  .tcard.done{ opacity:.58; }
+  .tcard.done .tt{ text-decoration:line-through; }
+  .tcard .note{ font-size:12.5px; color:var(--gray); margin-top:6px; line-height:1.5;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  /* ===== 详情弹层 ===== */
+  .mask{ position:fixed; inset:0; background:rgba(35,51,48,.42); z-index:120;
+    display:flex; align-items:flex-end; justify-content:center; }
+  .sheet{
+    width:100%; max-width:640px; background:#fff; border-radius:20px 20px 0 0;
+    padding:18px 16px 24px; max-height:88vh; overflow-y:auto;
+    box-shadow:0 -8px 30px rgba(0,0,0,.18); animation:sheetup .22s ease;
+  }
+  @keyframes sheetup{ from{ transform:translateY(34px); opacity:.35; } to{ transform:none; opacity:1; } }
+  .sheet h3{ margin:0 0 4px; font-size:16px; border:0; padding:0; }
+  .sheet .sub{ font-size:11.5px; color:var(--gray); margin-bottom:6px; }
+  .sheet .btns{ display:flex; gap:8px; margin-top:12px; }
+  .sheet .btns .btn{ margin-top:0; } .tab.on{ display:block; }
   .mini{ font-size:12px; color:var(--gray); margin-top:6px; line-height:1.6; }
   a{ color:var(--accent-deep); }
   ::selection{ background:rgba(79,196,140,.28); }
@@ -203,14 +247,17 @@
     <div class="card">
       <h2>手动补一条（可选）</h2>
       <label>要做什么</label><input id="t_task" placeholder="如：写团日活动总结">
-      <label>截止时间</label><input id="t_dl" type="datetime-local">
-      <label>预计耗时（小时）</label><input id="t_h" type="number" step="0.5" value="2">
+      <label>起始时间（可选，不填就是"没定时间"）</label><input id="t_st" type="datetime-local">
+      <label>截止时间（可选）</label><input id="t_dl" type="datetime-local">
+      <label>预计耗时（小时，可选）</label><input id="t_h" type="number" step="0.5" placeholder="不确定就先空着">
       <label>优先级</label><select id="t_p"><option>高</option><option selected>中</option><option>低</option></select>
       <button class="btn ghost" onclick="addTask()">保存任务</button>
+      <div class="mini">💡 <b>时间填不填都行</b>：只填截止、只填起始、或者都不填都可以，任务照样进卡片列表。时间是 00:00 就表示"只定日期、不定时刻"。</div>
     </div>
     <div class="card">
-      <h2>已有任务（<span id="tcount">0</span>）</h2>
-      <div id="tlist"></div>
+      <h2>待办卡片（<span id="tcount">0</span>）</h2>
+      <div class="mini" style="margin:-4px 0 10px">点卡片任意处 → 看详情 / 改内容；点左边圆圈 → 直接打勾。上面显示的是「未完成 / 全部」。</div>
+      <div class="tcards" id="tlist"></div>
     </div>
   </section>
 
@@ -390,6 +437,7 @@
     </div>
   </section>
 
+  <div id="taskModal" style="display:none"></div>
 </main>
 
 <script>
@@ -400,7 +448,8 @@ let PKEYS=Object.keys(PERIODS);
 let S={tt:{},tasks:[],periods:{}};
 function load(){ try{ const s=JSON.parse(localStorage.getItem('tuanwu')||'{}'); if(s.tt) S=s;
   if(!S.periods||!Object.keys(S.periods).length) S.periods=JSON.parse(JSON.stringify(PERIODS));
-  PKEYS=Object.keys(S.periods); }catch(e){} }
+  PKEYS=Object.keys(S.periods); }catch(e){}
+  S.tasks=(S.tasks||[]).map(normTask); }
 function save(){ localStorage.setItem('tuanwu', JSON.stringify(S)); }
 function tab(i,el){ document.querySelectorAll('.tab').forEach((t,k)=>t.classList.toggle('on',k===i));
   document.querySelectorAll('nav button').forEach(b=>b.classList.remove('on')); el.classList.add('on'); }
@@ -561,36 +610,136 @@ function autoAddTask(){
   if(!text){ alert('先粘贴消息'); return; }
   const o=parseMsg(text);
   o.remind=suggestRemind(text);
-  S.tasks.push(o); save(); renderTasks();
+  S.tasks.push(normTask(Object.assign({done:false,note:"",created:Date.now()},o))); save(); renderTasks();
   $('msgPaste').value='';
   $('msgOut').textContent='已识别：'+o.task+' ｜ 截止 '+(fmt(o.deadline)||'未识别')+' ｜ 约'+o.hours+'h ｜ '+o.priority;
 }
 function addTask(){
   const t=$('t_task').value.trim(); if(!t){ alert('先填"要做什么"'); return; }
-  S.tasks.push({task:t, deadline:$('t_dl').value, hours:parseFloat($('t_h').value)||2, priority:$('t_p').value, remind:(S.defRemind||'day8')});
-  save(); renderTasks(); ['t_task','t_dl'].forEach(id=>$(id).value='');
+  const hv=parseFloat($('t_h').value);
+  S.tasks.push({task:t, start:fromInputVal($('t_st').value||''), deadline:fromInputVal($('t_dl').value||''),
+    hours:isNaN(hv)?'':hv, priority:$('t_p').value, remind:(S.defRemind||'day8'),
+    done:false, note:'', created:Date.now()});
+  save(); renderTasks(); ['t_task','t_st','t_dl','t_h'].forEach(id=>{ if($(id)) $(id).value=''; });
 }
+// ================= 待办卡片 =================
+function normTask(o){
+  o=o||{};
+  if(o.done===undefined) o.done=false;
+  if(o.note===undefined) o.note='';
+  if(o.start===undefined) o.start='';
+  if(o.hours===undefined) o.hours='';
+  return o;
+}
+function dtLabel(s){ if(!s) return ''; const d=new Date(s); if(isNaN(d.getTime())) return s;
+  const hasT=/T\d{2}:\d{2}/.test(s);
+  return pad(d.getMonth()+1)+'-'+pad(d.getDate())+(hasT?(' '+pad(d.getHours())+':'+pad(d.getMinutes())):''); }
+function dueText(s){ if(!s) return ''; const d=new Date(s); if(isNaN(d.getTime())) return '';
+  const now=new Date();
+  if(!/T\d{2}:\d{2}/.test(s)){                       // 只定日期：按自然日算
+    const a=new Date(d.getFullYear(),d.getMonth(),d.getDate());
+    const b=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    const days=Math.round((a-b)/86400000);
+    if(days<0) return '逾期'+(-days)+'天';
+    if(days===0) return '今天';
+    return '还有'+days+'天';
+  }
+  const ms=d.getTime()-now.getTime();                   // 定了时刻：按剩余时间算
+  if(ms<0) return '逾期'+Math.max(1,Math.ceil(-ms/86400000))+'天';
+  if(ms<3600000) return Math.max(1,Math.round(ms/60000))+'分钟后';
+  if(ms<86400000) return Math.round(ms/3600000)+'小时后';
+  return '还有'+Math.ceil(ms/86400000)+'天'; }
+function toInputVal(s){ if(!s) return ''; return /T\d{2}:\d{2}/.test(s) ? s.slice(0,16) : s+'T00:00'; }
+function fromInputVal(v){ if(!v) return ''; return /T00:00$/.test(v) ? v.slice(0,10) : v; }
+function taskOrder(a,b){
+  const da=a.done?1:0, db=b.done?1:0; if(da!==db) return da-db;
+  const ta=a.deadline?new Date(a.deadline).getTime():Infinity;
+  const tb=b.deadline?new Date(b.deadline).getTime():Infinity;
+  return ta-tb;
+}
+function chip(txt,cls){ const s=document.createElement('span'); s.className='chip '+(cls||''); s.textContent=txt; return s; }
 function renderTasks(){
-  const box=$('tlist'); box.innerHTML=''; $('tcount').textContent=S.tasks.length;
+  const box=$('tlist'); if(!box) return; box.innerHTML='';
+  if($('tcount')) $('tcount').textContent = S.tasks.filter(t=>!t.done).length + ' / ' + S.tasks.length;
   if(!S.tasks.length){ box.innerHTML='<p class="hint">还没有任务</p>'; renderReminders(); return; }
-  S.tasks.forEach((t,i)=>{
-    const row=document.createElement('div'); row.className='row';
-    const info=document.createElement('div');
-    info.innerHTML='<div class="t">'+t.task+'</div><div class="s">截止 '+(fmt(t.deadline)||'未填')+' · 约'+t.hours+'小时 · '+t.priority+' · ⏰ '+remindLabel(remindTimeOf(t))+'</div>';
-    const sel=document.createElement('select'); sel.style.marginTop='6px';
-    REMIND_OPTS.forEach(o=>{ const op=document.createElement('option'); op.value=o.v; op.textContent='提醒：'+o.t; if((t.remind||'day8')===o.v) op.selected=true; sel.appendChild(op); });
-    sel.onchange=()=>{ t.remind=sel.value; if(S.fired) delete S.fired[fkey(t)]; save(); renderTasks(); };
-    info.appendChild(sel);
-    const d=document.createElement('div'); d.className='del'; d.textContent='删除';
-    d.onclick=()=>{ S.tasks.splice(i,1); save(); renderTasks(); };
-    const cal=document.createElement('div'); cal.textContent='📅 日历'; cal.title='把这条加到手机日历';
-    cal.style.cssText='cursor:pointer;font-size:13px;color:#2563eb;white-space:nowrap;margin-right:8px';
-    cal.onclick=()=>exportOne(i);
-    const btns=document.createElement('div'); btns.style.cssText='display:flex;align-items:center';
-    btns.appendChild(cal); btns.appendChild(d);
-    row.appendChild(info); row.appendChild(btns); box.appendChild(row);
+  S.tasks.map((t,i)=>i).sort((a,b)=>taskOrder(S.tasks[a],S.tasks[b])).forEach(i=>{
+    const t=S.tasks[i];
+    const card=document.createElement('div'); card.className='tcard'+(t.done?' done':'');
+    const chk=document.createElement('div'); chk.className='chk'+(t.done?' on':''); chk.textContent=t.done?'✓':'';
+    chk.title='点一下打勾 / 取消';
+    chk.onclick=ev=>{ ev.stopPropagation(); t.done=!t.done; if(S.fired) delete S.fired[fkey(t)]; save(); renderTasks(); };
+    const bd=document.createElement('div'); bd.className='bd';
+    const tt=document.createElement('div'); tt.className='tt'; tt.textContent=t.task; bd.appendChild(tt);
+    const mt=document.createElement('div'); mt.className='mt';
+    if(t.deadline && t.start) mt.appendChild(chip('🕐 '+dtLabel(t.start)+' → ⏰ '+dtLabel(t.deadline),'time'));
+    else if(t.deadline){
+      const late = !t.done && new Date(t.deadline).getTime()<Date.now();
+      mt.appendChild(chip('⏰ '+dtLabel(t.deadline),'time'+(late?' late':'')));
+    }
+    else if(t.start) mt.appendChild(chip('🕐 '+dtLabel(t.start)+' 起','time'));
+    else mt.appendChild(chip('随时',''));
+    if(t.deadline && !t.done){ const d=dueText(t.deadline); mt.appendChild(chip(d, d.indexOf('逾期')===0?'late':'')); }
+    if(t.hours) mt.appendChild(chip('约'+t.hours+'h',''));
+    const pv=t.priority||'中';
+    mt.appendChild(chip(pv+'优先', pv==='高'?'p-high':(pv==='低'?'p-low':'p-mid')));
+    const rt=remindTimeOf(t);
+    if(rt) mt.appendChild(chip('🔔 '+fmt2(rt),''));
+    else if(t.remind==='none'||!t.deadline) mt.appendChild(chip('🔕 不提醒',''));
+    bd.appendChild(mt);
+    if(t.note){ const n=document.createElement('div'); n.className='note'; n.textContent=t.note; bd.appendChild(n); }
+    card.appendChild(chk); card.appendChild(bd);
+    card.onclick=()=>openTask(i);
+    box.appendChild(card);
   });
   renderReminders();
+}
+let curTask=-1;
+function openTask(i){
+  const t=S.tasks[i]; if(!t) return; curTask=i;
+  const m=$('taskModal'); m.style.display='block'; m.innerHTML='';
+  const mask=document.createElement('div'); mask.className='mask';
+  mask.onclick=e=>{ if(e.target===mask) closeTask(); };
+  const sh=document.createElement('div'); sh.className='sheet';
+  sh.innerHTML='<h3>📌 任务详情</h3><div class="sub" id="d_sub"></div>'+
+    '<label>要做什么</label><input id="d_task">'+
+    '<label>起始时间（可选）</label><input id="d_st" type="datetime-local">'+
+    '<label>截止时间（可选）</label><input id="d_dl" type="datetime-local">'+
+    '<label>预计耗时（小时，可选）</label><input id="d_h" type="number" step="0.5" placeholder="不确定就空着">'+
+    '<label>优先级</label><select id="d_p"><option>高</option><option>中</option><option>低</option></select>'+
+    '<label>提醒</label><select id="d_r"></select>'+
+    '<label>备注 / 详情（可选）</label><textarea id="d_note" rows="4" placeholder="要交的材料、注意事项、对接人…"></textarea>'+
+    '<div class="btns"><button class="btn ghost" id="d_toggle"></button><button class="btn" id="d_save">保存</button></div>'+
+    '<div class="btns"><button class="btn ghost" id="d_cal">📅 加入手机日历</button><button class="btn ghost" id="d_del" style="color:var(--danger)">删除</button></div>'+
+    '<button class="btn ghost" id="d_close" style="margin-top:8px">关闭</button>';
+  mask.appendChild(sh); m.appendChild(mask);
+  $('d_sub').textContent='这条状态：'+(t.done?'已完成 ✓':'未完成')+'　｜　时间填 00:00 = 只定日期';
+  $('d_task').value=t.task||'';
+  $('d_st').value=toInputVal(t.start);
+  $('d_dl').value=toInputVal(t.deadline);
+  $('d_h').value=(t.hours===''||t.hours==null)?'':t.hours;
+  $('d_p').value=t.priority||'中';
+  REMIND_OPTS.forEach(o=>{ const op=document.createElement('option'); op.value=o.v; op.textContent=o.t; if((t.remind||'day8')===o.v) op.selected=true; $('d_r').appendChild(op); });
+  $('d_note').value=t.note||'';
+  $('d_toggle').textContent = t.done?'↩︎ 标记未完成':'✓ 标记完成';
+  $('d_toggle').onclick=()=>{ t.done=!t.done; if(S.fired) delete S.fired[fkey(t)]; save(); closeTask(); renderTasks(); };
+  $('d_save').onclick=saveTaskDetail;
+  $('d_cal').onclick=()=>exportOne(i);
+  $('d_del').onclick=()=>{ if(confirm('删除这条任务？')){ S.tasks.splice(i,1); save(); closeTask(); renderTasks(); } };
+  $('d_close').onclick=closeTask;
+}
+function closeTask(){ curTask=-1; const m=$('taskModal'); if(m){ m.style.display='none'; m.innerHTML=''; } }
+function saveTaskDetail(){
+  const t=S.tasks[curTask]; if(!t) return;
+  const nt=$('d_task').value.trim(); if(!nt){ alert('"要做什么"不能空'); return; }
+  t.task=nt;
+  t.start=fromInputVal($('d_st').value||'');
+  t.deadline=fromInputVal($('d_dl').value||'');
+  const hv=parseFloat($('d_h').value); t.hours=isNaN(hv)?'':hv;
+  t.priority=$('d_p').value;
+  t.remind=$('d_r').value;
+  t.note=$('d_note').value.trim();
+  if(S.fired) delete S.fired[fkey(t)];
+  save(); closeTask(); renderTasks();
 }
 function fmt(s){ if(!s) return ''; const d=new Date(s); if(isNaN(d)) return s;
   return pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
